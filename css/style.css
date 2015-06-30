@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #d43535;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+  color: #ebd6a0;
+}
+body {
+  font-size: 12pt;
+  line-height: 1.75em;
+  font-family: Arial,sans-serif;
+  background-color: black;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position:  0% 0%;
+  color: #c0c1c1;
+}
+br.clear {
+  clear: both;
+}
+h2, h3, h4 {
+  margin-bottom: 1em;
+  font-family: Arvo,serif;
+  color: #ebd6a0;
+}
+img.left {
+  margin: 5px 20px 20px 0;
+  float: left;
+}
+img.top {
+  margin: 5px 0 20px;
+}
+p {
+  margin-bottom: 1.5em;
+}
+ul {
+  margin-bottom: 1.5em;
+}
+.imageList {
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+.imageList li {
+  clear: both;
+}
+#bg {
+  padding: 60px 0 80px;
+  background: transparent url(../images/lightsbg.jpg) no-repeat scroll left top;
+}
+#banner {
+  border-color: white;
+  margin: 0px 0 0;
+  padding: 30px;
+  background: black none repeat scroll 0%;
+  position: relative;
+  height: 200px;
+  width: 1120px;
+}
+#box1 {
+  margin: 0px 0 25px;
+  overflow: hidden;
+}
+#box2 {
+  margin: 0px 0 25px;
+  overflow: hidden;
+}
+#content {
+  border-color: white;
+  margin: 0px 0 0 265px;
+  padding: 30px;
+  background: black none repeat scroll 0%;
+  width: 855px;
+  color: white;
+}
+#copyright {
+  margin: 40px 0 0;
+  text-align: center;
+  color: #707070;
+  font-size: 0.9em;
+}
+#copyright a {
+  color: #888888;
+}
+#footer {
+  padding: 30px;
+  background: black none repeat scroll 0%;
+  position: relative;
+  width: 1120px;
+  color: #addbea;
+}
+#footer a {
+  color: #e2f2f8;
+}
+#footer h2, #footer h3, #footer h4 {
+  color: #ffffff;
+}
+#footer ul {
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+  margin-bottom: 0;
+}
+#footer p {
+  margin-bottom: 0;
+  color: #ebd6a0;
+}
+#footer ul li {
+  border-top: 1px dashed #6dbfda;
+  padding: 10px 0;
+}
+#footer ul li.first {
+  border-top: 0 none;
+  padding-top: 0;
+}
+#footerContent {
+  margin: 0px 0 0 265px;
+  width: 855px;
+}
+#footerSidebar {
+  width: 180px;
+  float: left;
+}
+#header {
+  padding: 30px;
+  position: relative;
+  height: 80px;
+  width: 1120px;
+  color: #ebd6a0;
+}
+#logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 80px;
+  line-height: 80px;
+  letter-spacing: -1px;
+  color: #ebd6a0;
+}
+#logo a {
+  text-decoration: none;
+  color: #ebd6a0;
+}
+#logo h1 {
+  font-size: 2.75em;
+  font-family: Arvo,serif;
+  color: #ebd6a0;
+}
+#main {
+  margin: 30px 0 0;
+  padding: 0px;
+  position: relative;
+  width: 1180px;
+  color: #6b6b6b;
+}
+#main a {
+  color: #262626;
+}
+#main strong {
+  color: #404040;
+}
+#main h2, #main h3, #main h4 {
+  color: #ebd6a0;
+}
+#main ul {
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+#main ul li {
+  border-top: 1px dashed #bfbfbf;
+  padding: 10px 0;
+}
+#main ul li.first {
+  border-top: 0 none;
+  padding-top: 0;
+}
+#nav {
+  position: absolute;
+  right: 30px;
+  height: 48px;
+  top: 55px;
+  font-family: Arvo,serif;
+  font-size: 1.1em;
+}
+#nav ul {
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+#nav ul li {
+  margin: 0 0.5em;
+  padding: 0.25em 1.1em;
+  float: left;
+}
+#nav ul li.active {
+  background: black none repeat scroll 0%;
+}
+#nav li a {
+  text-decoration: none;
+  color: #d9dada;
+}
+#nav ul li.active a {
+  color: #ffffff;
+}
+#outer {
+  margin: 0 auto;
+  position: relative;
+  width: 1180px;
+}
+#search input.button {
+  border:  none;
+  padding: 6px;
+  background: #d43535 none repeat scroll 0%;
+  margin-left: 1em;
+  color: #ffffff;
+}
+#search input.text {
+  border: 1px dashed #ffffff;
+  padding: 5px;
+}
+#sidebar {
+  border-color: white;
+  padding: 30px;
+  float: left;
+  width: 180px;
+  color: #959797;
+  background-color: black;
+}
+#sidebar a {
+  color: #d9dada;
+}
+#sidebar h2, #sidebar h3, #sidebar h4 {
+  color: #ebd6a0;
+}
+#sidebar ul {
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+#sidebar ul li {
+  border-top: 1px dashed #424545;
+  padding: 10px 0;
+}
+#sidebar ul li.first {
+  border-top: 0 none;
+  padding-top: 0;
+}

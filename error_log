@@ -1,0 +1,11 @@
+[26-Oct-2009 11:30:09] PHP Fatal error:  [ionCube Loader] The Loader must appear as the first entry in the php.ini file in Unknown on line 0
+[26-Oct-2009 11:30:10] PHP Fatal error:  [ionCube Loader] The Loader must appear as the first entry in the php.ini file in Unknown on line 0
+[16-Mar-2011 16:22:41] PHP Warning:  require(./wp-blog-header.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:22:41] PHP Warning:  require(./wp-blog-header.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:22:41] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required './wp-blog-header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:23:01] PHP Warning:  require(./wp-blog-header.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:23:01] PHP Warning:  require(./wp-blog-header.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:23:01] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required './wp-blog-header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:26:42] PHP Warning:  require(./wp-blog-header.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:26:42] PHP Warning:  require(./wp-blog-header.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/tamea/public_html/index.php on line 17
+[16-Mar-2011 16:26:42] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required './wp-blog-header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tamea/public_html/index.php on line 17

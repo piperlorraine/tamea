@@ -1,0 +1,26 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+<Files .htaccess>
+order deny,allow
+deny from all
+</Files> 
+
+<FilesMatch "\.(ico|flv|jpe?g|png|gif|js|css|swf)$">
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+#get rid of file extensions 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html 
+
+#301 redirect
+rewritecond %{http_host} ^shineandrisecoaching.com [nc]
+rewriterule ^(.*)$ http://www.shineandrisecoaching.com$1 [r=301,nc]
+
+#get rid of trailing slashes
+RewriteRule ^(.*)/$ http://www.shineandrisecoaching.com%{HTTP_HOST}/$1 
+
+

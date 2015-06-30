@@ -1,0 +1,90 @@
+body {
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 50%;
+  background-color: white;
+  color: black;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: lighter;
+}
+a, a:hover {
+  font-weight: lighter;
+  color: #0058a0;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+#site_content {
+  background: white none repeat scroll 0% 50%;
+  font-weight: lighter;
+  color: #6C6C6C;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 1.2em;
+}
+#left_content ul li {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: left center;
+  color: #6C6C6C;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: lighter;
+}
+.headerbar {
+  background-color: white;
+  color: #6C6C6C;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.footerbar {
+  background-color: white;
+  color: #6C6C6C;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+nav, footer, headerbar, footerbar {
+  border:  none;
+  background: white none repeat scroll 0% 50%;
+  color: #6C6C6C;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+footer {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #6C6C6C;
+}
+footer a:hover {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #8190A6;
+}
+h1 {
+  font-weight: lighter;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #0c535e;
+}
+h3, h4, h5 {
+  font-weight: lighter;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #097089;
+}
+ul#nav li a {
+  font-weight: lighter;
+  color: #3B6378;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+ul#nav ul {
+  background: white none repeat scroll 0% 50%;
+  font-weight: lighter;
+  color: #7A9BAB;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+ul#nav ul li a {
+  font-weight: lighter;
+  color: #7A9BAB;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+ul#nav li.selected a, ul#nav li a:hover, ul#nav ul li a:hover, ul#nav ul li a:focus, ul#nav li.selected ul a:hover {
+  font-weight: lighter;
+  color: #00a1af;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+a:hover, footer a, ul#nav li.selected ul a {
+  font-weight: lighter;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #7A9BAB;
+}
