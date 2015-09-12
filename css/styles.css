@@ -29,22 +29,41 @@ a.rightlinks {
 ul {
   margin-bottom: 5px;
 }
+.ui-content ul li {
+  padding:5px 0;
+}
 h1 {
   font:normal 2.75em Century Gothic, sans-serif;
   text-align: center;
   padding-bottom: 5px;
   text-shadow: #474747 2px 1px 2px;
+  margin:.6em 0 0;
 }
 h2 {
   font: 2.35em 'Marck Script', cursive;
   text-align: center;
   color: #54534f;
+  margin:.5em 0 .8em;
 }
-h3 {
+.homepage h1 {
+  margin-bottom:.6em;
+}
+.homepage h2 {
+  margin-top:.8em;
+}
+h3, h4 {
   margin-bottom: 1em;
   font:normal 1.2em Century Gothic, sans-serif;
   letter-spacing: -1px;
-}/*
+  color: #000000;
+}
+h3.big-top {
+  margin-top:2em;
+}
+h3.big-btm {
+  margin-bottom:2em;
+}
+/*
 h4 {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -59,7 +78,12 @@ p {
   margin-bottom: 1.5em;
   color:#666666;
 }
-
+.ui-header .ui-title, .ui-footer .ui-title {
+  margin:0;
+}
+.header #logo {
+  margin-top:20px;
+}
 #container {
   border-radius:25px;
   -webkit-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
@@ -80,6 +104,8 @@ ul#nav {
 	margin:0;
 }
 ul#nav ul {
+  margin:0;
+  padding:0;
   padding-bottom: 15px;
   z-index: 10000;
 }
@@ -91,7 +117,7 @@ ul.sf-menu ul {
   width: 155px;
   font-size: .8em;
   top: auto;
-  left: -999999px;
+  display:none;
 }
 ul.sf-menu li {
   display: inline;
@@ -127,6 +153,9 @@ ul#nav li a {
   margin-bottom: 5px;
   margin-top: 5px;
 }
+ul#nav li a li a {
+
+}
 ul#nav li a:hover {
   text-decoration: none;
 }
@@ -161,6 +190,76 @@ ul.sf-menu li:hover ul ul, ul.sf-menu li:focus ul ul, ul.sf-menu li.sf-hover ul 
   left: -999999px;
 }
 
+/****** CONTACT ******/
+.ui-content {
+  color: #666666;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 1.3em;
+}
+.column {
+  width:50%;
+  float:left;
+  margin-bottom:25px;
+}
+.column-float-right {
+  float:right;
+}
+.column-left {
+  width:45%;
+}
+.pricing-content .column-left {
+  width:40%;
+}
+.column-right {
+  width:55%;
+}
+.pricing-content .column-right {
+  width:60%;
+}
+.column-left .column-divide {
+  border-right:3px solid #666;
+  padding:0 45px 15px 10px;
+}
+.column-right .column-divide {
+  padding-left:40px;
+}
+.column ul {
+  padding-left:20px;
+}
+.column .social-box {
+  margin-top:45px;
+  text-align:center;
+}
+img.center {
+  display:block;
+  margin:0 auto;
+}
+p em {
+  font-size:1em;
+  letter-spacing:-1px;
+}
+a.contact {
+  font:1em Century Gothic, sans-serif;
+}
+
+.video-box {
+  text-align:center;
+}
+.badge-box {
+  text-align:center;
+  margin-top:75px;
+}
+.pricing-item {
+  border-top:2px solid #000;
+  margin:50px 0;
+  text-align:center;
+}
+.pricing-item h3 {
+  margin-top:1.8em;
+}
+.pricing-item h4 {
+  margin:.8em 0;
+}
 
 /*** HEADER ***/
 img.left {
@@ -180,14 +279,12 @@ img.top {
 }
 .imgbanner{
   text-align: center;
-  padding-bottom: 25px;
   margin: 5px auto 5px auto;
 }
 .linkbox{
   text-align: center;
   font-family: Tahoma, Geneva, sans-serif;
-  padding-bottom: 15px;
-  margin: -25px auto 10px;
+  margin: 0 0 25px;
 }
 .linkbox a{
   text-align: center;
@@ -204,6 +301,7 @@ img.top {
   margin: 0px auto;
   padding-bottom: 5px;
   text-align: center;
+  clear:both;
 }
 #header {
   margin: 35px auto;
@@ -213,44 +311,23 @@ img.top {
   padding-bottom: 130px;
 }
 #box1 {
-  width: 900px;
-  padding-bottom: 40px;
+  padding: 0 20px 40px;
   margin: 1px auto 1px auto;
   font-size: 1.3em;
 }
 #box2 {
-  width: 900px;
   text-align: center;
   padding-bottom: 5px;
   margin: 1px auto 1px auto;
 }
+.linkbox {
+  color:#666666;
+}
 a.imglink {
-  padding: 1% 1% 1% 23px;
-  margin-left: 8px;
+  padding: 10px 15px;
+  display:inline-block;
 }
-#narrowcontent {
-  float: left;
-  width: 375px;
-  background: white;
-  color: #666666;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 1.3em;
-  margin-right: 10px;
-  padding-right: 45px;
-  margin-left: 10px;
-  border-right-style: solid;
-  border-top-color: #666666;
-}
-#widecontent {
-  float: right;
-  width: 500px;
-  margin-top: -25px;
-  background: white;
-  color: #666666;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 1.3em;
-  color: #666666;
-}
+/*
 .widecontent a {
   color: #d9dada;
 }
@@ -272,10 +349,9 @@ a.imglink {
 .narrowcontent ul li.first {
   border-width: 0;
   padding-top: 0;
-}
+}*/
 #copyright {
   position: relative;
-  width: 950px;
   margin: 30px auto 20px;
   text-align: center;
   color: #505556;
@@ -283,7 +359,6 @@ a.imglink {
 }
 #schema {
   position: relative;
-  width: 950px;
   margin: 30px auto 20px;
   text-align: center;
   color: #505556;
@@ -299,4 +374,109 @@ a.imglink {
   width: 950px;
   color: #505556;
   margin: 0px auto 0px auto;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* tablet devices */
+@media only screen 
+and (max-width : 1040px)  {
+  html, body, .ui-overlay-a {
+    background:none;
+  }
+  #container {
+    border-radius:0;
+    box-shadow:none;
+    border:none;
+    margin-top:0;
+    width:auto;
+  }
+}
+/* mobile devices */
+@media only screen 
+and (max-width : 760px) {
+  .homepage h1, h1 {
+    font-size:1.2em;
+    text-shadow: #474747 1px 0 1px;
+    margin:0;
+  }
+  .homepage h2, h2 {
+    margin:0;
+    font-size:1.8em;
+  }
+  h3 {
+    margin-bottom:0;
+  }
+  p {
+    margin:.5em 0;
+  }
+  #container {
+    padding:0;
+  }
+  #box1 {
+    padding:0;
+  }
+  #box1 .imgbanner img {
+    width:100%;
+    height:auto;
+  }
+  #box1 .linkbox {
+    padding:0 10px 15px;
+    margin:0;
+  }
+  .main-copy {
+    padding:0 15px;
+  }
+  #box2 {
+    width:300px;
+    margin-top:20px;
+  }
+  a.imglink {
+    padding:10px;
+  }
+  .social-box a.imglink {
+    padding:10px 8px;
+  }
+  .column .social-box {
+    margin-top:25px;
+  }
+  .column, .pricing-content .column {
+    float:none;
+    width:100%;
+  }
+  .column-right .column-divide,
+  .column-left .column-divide {
+    border:none;
+    padding:0 15px;
+  }
+  .column img.center {
+    display:none;
+  }
+  .column img.top {
+    display:block;
+    margin:0 auto;
+  }
+  .pricing-item  {
+    margin:30px 0;
+  }
+  .pricing-item:last-child {
+    border-bottom:2px solid #000;
+    padding-bottom:30px;
+  }
+  .pricing-item h3 {
+    margin:1em 0 .5em;
+  }
+  .pricing-item img {
+    max-width:100%;
+    height:auto;
+  }
 }

@@ -11,27 +11,29 @@
 
 <link rel="icon" type="image/ico" href="favicon.ico" />
 <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <!-- stylesheets -->
 <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
 
-<!-- jQuery Mobile -->
+<!-- jQuery -->
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/responsivemobilemenu.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<div data-role="page">
+<div data-role="page" class="homepage">
 	<!-- begin container -->
 <div id="container">
 
-	<div data-role="header">
+	<div data-role="header" class="header">
 		<!-- begin navigation -->
-		<div id="navigation">
+		<div id="navigation" class="clearfix">
+			<div class="rmm" data-menu-style = "minimal">
 			<ul class="sf-menu" id="nav">
 				<li class="selected"><a href="index.htm">home</a></li>
 				<li><a href="contact">contact</a></li>
-				<li><a href="#">galleries</a>
+				<li class="li-nav-parent"><a href="#" class="parent-nav-item">galleries</a>
 					<ul>
 						<li><a href="headshots">headshots</a></li>
 						<li><a href="portraits">portraits</a></li>
@@ -46,6 +48,7 @@
 				<li><a href="pricing">pricing</a></li>
 				<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
 			</ul>
+			</div>
 		</div>
 		
 		<div id="logo"><img src="images/tbirdslogo.gif" width="100px" height="100px" alt="tburd" /></div>
@@ -54,7 +57,7 @@
 	</div>
 	
 	<!-- begin content -->
-	<div role="main" class="ui-content">
+	<div role="main" class="ui-content" data-enhance="false">
 		<div id="box1">
 			<div class="imgbanner"><img src="images/homepagebanner2.jpg" alt="vancouver photographer Tamea Burd" height="355" width="500"></div>
 			<div class="linkbox">
@@ -64,6 +67,7 @@
 				<a href="headshots">headshots</a> | 
 				<a href="weddings">weddings</a>
 			</div>
+			<div class="main-copy">
 			<h3>PHILOSOPHY:</h3>
 			<p>Your personality shining through your eyes. The smile that lights you up in your headshots or portraits. 
 			In a family portrait or at your wedding, when the look of love on your face is just amazing... 
@@ -77,6 +81,7 @@
 			<p>Available throughout Vancouver and Lower Mainland, BC. Corporate headshots and business headshots. 
 			Online profile and online dating portraits. Wedding photography. Family portraits and child portraits. 
 			Author, musician and actor headshots. Tamea Burd Photography is an eco-friendly business. Images are provided exclusively in digital formats.</p>
+			</div>
 		</div>
 		
 		<div id="box2">
@@ -92,7 +97,7 @@
 	
 </div>
 
-<div  data-role="footer">
+<div  data-role="footer" data-enhance="false">
 	<!-- footer -->
 	<div id="copyright">
 		<p>Copyright &copy; 2015 Tamea Burd Photography | <a href="sitemap.xml">Sitemap</a> | Website design by <a href="http://www.prismaticwebsitesolutions.com/">Prismatic Web Solutions</a></p>

@@ -8,88 +8,101 @@
 <link rel="canonical" href="http://www.tameaburdphotography.com/contact"/>
 <link rel="icon" type="image/ico" href="favicon.ico"/>
 <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <!-- stylesheets -->
-<link rel="stylesheet" href="css/contact.css" type="text/css"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
 
-<!-- jQuery Mobile -->
+<!-- jQuery -->
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/responsivemobilemenu.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<!-- begin container -->
+<div data-role="page">
 <div id="container">
-<!-- begin navigation -->
-<div id="navigation">
-<ul class="sf-menu" id="nav">
-<li><a href="index.htm">home</a></li>
-<li class="selected"><a href="contact">contact</a></li>
-<li><a href="#">galleries</a>
-<ul>
-<li><a href="headshots">headshots</a></li>
-<li><a href="portraits">portraits</a></li>
-<li><a href="corporate">corporate</a></li>
-<li><a href="family">family portraits</a></li>
-<li><a href="weddings">weddings</a></li>
-<li><a href="fineart">fine art</a></li>
-</ul>
-</li>
-<li><a href="about">about</a></li>
-<li><a href="testimonials">testimonials</a></li>
-<li><a href="pricing">pricing</a></li>
-<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
-</ul>
+	<div data-role="header" class="header">
+		<!-- begin navigation -->
+		<div id="navigation" class="clearfix">
+			<div class="rmm" data-menu-style = "minimal">
+			<ul class="sf-menu" id="nav">
+				<li class="selected"><a href="index.htm">home</a></li>
+				<li><a href="contact">contact</a></li>
+				<li class="li-nav-parent"><a href="#" class="parent-nav-item">galleries</a>
+					<ul>
+						<li><a href="headshots">headshots</a></li>
+						<li><a href="portraits">portraits</a></li>
+						<li><a href="corporate">corporate</a></li>
+						<li><a href="family">family portraits</a></li>
+						<li><a href="weddings">weddings</a></li>
+						<li><a href="fineart">fine art</a></li>
+					</ul>
+				</li>
+				<li><a href="about">about</a></li>
+				<li><a href="testimonials">testimonials</a></li>
+				<li><a href="pricing">pricing</a></li>
+				<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
+			</ul>
+			</div>
+		</div>
+		
+		<div id="logo"><img src="images/tbirdslogo.gif" width="100px" height="100px" alt="tburd" /></div>
+		<h1>TAMEA BURD PHOTOGRAPHY</h1>
+		<h2>contact</h2>
+	</div>
+	<!-- begin content -->
+	<div role="main" class="ui-content" data-enhance="false">
+
+		<div class="column column-float-right column-right">
+			<div class="column-divide">
+				<img class="center" src="images/contact.gif" alt="contact vancouver photographer Tamea Burd" height="150" width="150" />
+				<h3>PHONE: <span class="number">778-737-1057</span></h3>
+				<p>(This is a business land-line. Calls only, no texts.)</p>
+				<p>Phone inquiries answered between 10 am. and 6 pm.</p>
+				<h3 class="big-btm">EMAIL: <a class="contact" href="mailto:mail@tameaburdphotography.com">mail@tameaburdphotography.com</a></h3>
+				<p>I look forward to hearing from you!</p>
+
+				<div class="social-box">
+					<a class="imglink" href="http://www.yelp.ca/biz/tamea-burd-photography-vancouver"><img src="images/yelplogo.gif" alt="yelp" height="45" width="45"/></a>
+					<a class="imglink" href="http://www.facebook.com/tameaburdphotography"><img src="images/fblogo.gif" alt="facebook" height="45" width="45"/></a>
+					<a class="imglink" href="http://twitter.com/tameaburdphotos"><img src="images/twitterlogo.gif" alt="twitter" height="45" width="45"/></a>
+					<a class="imglink" href="http://pinterest.com/tameab/"><img src="images/pinterestlogo.gif" alt="pinterest" height="45" width="45"/></a>
+					<a class="imglink" href="http://www.linkedin.com/in/tameaburdphotography"><img src="images/linkedinlogo.gif" alt="linkedin" height="45" width="45"/></a>
+				</div>
+			</div>
+		</div>
+		<div class="column column-float-right column-left">
+			<div class="column-divide">
+				<h3 class="dark">WHEN YOU INQUIRE, PLEASE INCLUDE:</h3>
+				<ul>
+					<li>Your preferred dates and/or times for your session.</li>
+					<li>The type of photos you need: Headshot, online dating, wedding, event, portrait, corporate, family.</li>
+					<li>Your preferred location: My home studio, your home, a park, your office, etc.</li>
+				</ul>
+				<p><em>All group or family photo sessions take place on-location.</em></p>
+
+				<h3 class="big-top">WEDDING INQUIRIES PLEASE INCLUDE:</h3>
+				<ul>
+					<li>Your date</li>
+					<li>Your location(s)</li>
+					<li>Approximate times and number of hours</li>
+					<li>Approximate size of wedding party</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div> <!-- container -->
+
+	<div  data-role="footer" data-enhance="false">
+		<!-- footer -->
+		<div id="copyright">
+			<p>Copyright &copy; 2015 Tamea Burd Photography, Vancouver, BC, Canada. All Rights Reserved.</p>
+		</div>
+	<!-- end footer --> 
+	</div>
+
 </div>
-<!-- begin header -->
-<div id="header">
-<div id="logo"><img src="images/tbirdslogo.gif" alt="Tamea Burd Photography" /></div>
-<h1>TAMEA BURD PHOTOGRAPHY</h1>
-<h2>contact</h2>
-</div>
-<!-- begin content -->
-<div id="narrowcontent">
-<h3>WHEN YOU INQUIRE, PLEASE INCLUDE:</h3>
-<ul>
-<li>Your preferred dates and/or times for your session.</li>
-<li>The type of photos you need: Headshot, online dating, wedding, event, portrait, corporate, family.</li>
-<li>Your preferred location: My home studio, your home, a park, your office, etc.</li>
-</ul>
-<p class="italic">All group or family photo sessions take place on-location.</p>
-<p class="space"></p>
-<p class="medium">WEDDING INQUIRIES PLEASE INCLUDE:</p>
-<ul>
-<li>Your date</li>
-<li>Your location(s)</li>
-<li>Approximate times and number of hours</li>
-<li>Approximate size of wedding party</li>
-</ul>
-</div>
-<div id="widecontent">
-<img class="center" src="images/contact.gif" alt="contact vancouver photographer Tamea Burd" height="150" width="150" />
-<div class="box1">
-<p class="large">PHONE: <span class="number">778-737-1057</span></p>
-<p>Phone inquiries answered between 10 am. and 6 pm.</p>
-<p class="large2">EMAIL:<a class="contact" href="mailto:mail@tameaburdphotography.com"> mail@tameaburdphotography.com</a></p>
-<p class="space"></p>
-<p>I look forward to hearing from you!</p>
-<p class="space"></p>
-<p class="space"></p>
-</div>
-<div class="box2">
-<a class="imglink" href="http://www.yelp.ca/biz/tamea-burd-photography-vancouver"><img src="images/yelplogo.gif" alt="yelp" height="45" width="45"/></a>
-<a class="imglink" href="http://www.facebook.com/tameaburdphotography"><img src="images/fblogo.gif" alt="facebook" height="45" width="45"/></a>
-<a class="imglink" href="http://twitter.com/tameaburdphotos"><img src="images/twitterlogo.gif" alt="twitter" height="45" width="45"/></a>
-<a class="imglink" href="http://pinterest.com/tameab/"><img src="images/pinterestlogo.gif" alt="pinterest" height="45" width="45"/></a>
-<a class="imglink" href="http://www.linkedin.com/in/tameaburdphotography"><img src="images/linkedinlogo.gif" alt="linkedin" height="45" width="45"/></a>
-</div>
-<br class="clear" />
-</div>
-</div>
-<div id="copyright">
-<p>Copyright &copy; 2015 Tamea Burd Photography, Vancouver, BC, Canada. All Rights Reserved.</p>
-</div>
-<!-- end footer --> 
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-3497126-2']);

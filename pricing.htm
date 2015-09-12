@@ -9,119 +9,137 @@
 <link rel="icon" type="image/ico" href="favicon.ico"/>
 <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
 <!-- stylesheets -->
-<link rel="stylesheet" href="css/pricing.css" type="text/css"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/responsivemobilemenu.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<!-- begin container -->
+<div data-role="page">
 <div id="container">
-<!-- begin navigation -->
-<div id="navigation">
-<ul class="sf-menu" id="nav">
-<li><a href="index.htm">home</a></li>
-<li><a href="contact">contact</a></li>
-<li><a href="#">galleries</a>
-<ul>
-<li><a href="headshots">headshots</a></li>
-<li><a href="portraits">portraits</a></li>
-<li><a href="corporate">corporate</a></li>
-<li><a href="family">family portraits</a></li>
-<li><a href="weddings">weddings</a></li>
-<li><a href="fineart">fine art</a></li>
-</ul>
-</li>
-<li><a href="about">about</a></li>
-<li><a href="testimonials">testimonials</a></li>
-<li class="selected"><a href="pricing">pricing</a></li>
-<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
-</ul>
+	<div data-role="header" class="header">
+		<!-- begin navigation -->
+		<div id="navigation" class="clearfix">
+			<div class="rmm" data-menu-style = "minimal">
+			<ul class="sf-menu" id="nav">
+				<li class="selected"><a href="index.htm">home</a></li>
+				<li><a href="contact">contact</a></li>
+				<li class="li-nav-parent"><a href="#" class="parent-nav-item">galleries</a>
+					<ul>
+						<li><a href="headshots">headshots</a></li>
+						<li><a href="portraits">portraits</a></li>
+						<li><a href="corporate">corporate</a></li>
+						<li><a href="family">family portraits</a></li>
+						<li><a href="weddings">weddings</a></li>
+						<li><a href="fineart">fine art</a></li>
+					</ul>
+				</li>
+				<li><a href="about">about</a></li>
+				<li><a href="testimonials">testimonials</a></li>
+				<li><a href="pricing">pricing</a></li>
+				<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
+			</ul>
+			</div>
+		</div>
+		
+		<div id="logo"><img src="images/tbirdslogo.gif" width="100px" height="100px" alt="tburd" /></div>
+		<h1>TAMEA BURD PHOTOGRAPHY</h1>
+		<h2>pricing</h2>
+	</div>
+	<!-- begin content -->
+	<div role="main" class="ui-content pricing-content" data-enhance="false">
+		<div class="column column-float-right column-right">
+			<div class="column-divide">
+				<p><a class="contact" href="contact">Contact me</a> for detailed information and a personalized quote.</p>
+				<div class="pricing-box">
+					<div class="pricing-item pricing-item-first">
+						<h3>HEADSHOTS, PORTRAITS &amp; ONLINE PROFILE PORTRAITS:</h3>
+						<img src="images/tburdhpbanner.jpg" alt="vancouver headshot portrait photographer" height="130" width="518" />
+						<div class="prices">
+							<h4>All-inclusive pricing from $295.</h4>
+							<p>Your personalized quote includes detailed information about all the services you receive.</p>
+						</div>
+					</div>
+					<div class="pricing-item">
+						<h3>CORPORATE, BUSINESS &amp; REALTOR HEADSHOTS:</h3>
+						<img src="images/tburdcorpbanner.jpg" alt="corporate photographer business photographer" height="130" width="518" />
+						<div class="prices">
+							<h4>All-inclusive pricing from $295.</h4>
+							<p>Your personalized quote includes detailed information about all the services you receive.</p>
+						</div>
+					</div>
+					<div class="pricing-item">
+						<h3>FAMILY PORTRAITS &amp; CHILD PORTRAITS:</h3>
+						<img src="images/tburdfambanner.jpg" alt="children's family photographer" height="130" width="518" />
+						<div class="prices">
+							<h4>All-inclusive pricing from $295.</h4>
+							<p>Your personalized quote includes detailed information about all the services you receive.</p>
+						</div>
+					</div>
+					<div class="pricing-item pricing-item-last">
+						<h3>WEDDING PHOTOGRAPHY:</h3>
+						<img src="images/tburdweddingsbanner.jpg" alt="wedding images" height="130" width="518" />
+						<div class="prices">
+							<h4>All-inclusive wedding coverage from $1700</h4>
+							<p>Pricing begins at 4 hours of coverage.</p>
+							<p>Your personalized quote includes detailed information about all the services you receive.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column column-float-right column-left">
+			<div class="column-divide">
+				<h3>YOU'RE GUARANTEED:</h3>
+				<ul>
+					<li>A relaxed, fun, friendly atmosphere</li>
+					<li>Honest, ethical business practices</li>
+					<li>All-inclusive rates</li>
+					<li>Free consultations</li>
+					<li>Signed contracts and/or invoices</li>
+					<li>Eco-friendly services</li>
+				</ul>
+				<h3 class="big-top">PERSONALIZED OPTIONS:</h3>
+				<ul>
+					<li>Flexible booking</li>
+					<li>Customizable session length</li>
+					<li>Optional on-location sessions</li>
+					<li>Customizable wedding coverage</li>
+				</ul>
+				<h3 class="big-top">ALL PRICING INCLUDES:</h3>
+				<ul>
+					<li>Unlimited exposures</li>
+					<li>Individually retouched images</li>
+					<li>Web-ready images</li>
+					<li>No watermarks</li>
+					<li>Duplicate b&amp;w images</li>
+				</ul>
+				<h3 class="big-top">DESTINATION &amp; OUT OF AREA:</h3>
+				<p>I'm happy to take a trip, near or far! Inquire about photography services outside of the Vancouver area.</p>
+				<div class="badge-box">
+					<img src="images/vancitybride.gif" alt="vancitybride" height="85" width="265" /><br>
+					<img src="images/weddingful.jpg" alt="weddingful" height="85" width="85" />
+					<img src="images/yelplove.jpg" alt="yelp" height="85" width="135" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div> <!-- container -->
+
+	<div  data-role="footer" data-enhance="false">
+		<!-- footer -->
+		<div id="copyright">
+			<p>Copyright &copy; 2015 Tamea Burd Photography, Vancouver, BC, Canada. All Rights Reserved.</p>
+		</div>
+	<!-- end footer --> 
+	</div>
+
 </div>
-<!-- begin header -->
-<div id="header">
-<div id="logo"><img src="images/tbirdslogo.gif" width="100px" height="100px" alt="tburd" /></div>
-<h1>TAMEA BURD PHOTOGRAPHY</h1>
-<h2>pricing</h2>
-</div>
-<!-- begin content -->
-<div id="narrowcontent">
-<p class="medium">YOU'RE GUARANTEED:</p>
-<ul>
-<li>A relaxed, fun, friendly atmosphere</li>
-<li>Honest, ethical business practices</li>
-<li>All-inclusive rates</li>
-<li>Free consultations</li>
-<li>Signed contracts and/or invoices</li>
-<li>Eco-friendly services</li>
-</ul>
-<p class="space"></p>
-<p class="medium">PERSONALIZED OPTIONS:</p>
-<ul>
-<li>Flexible booking</li>
-<li>Customizable session length</li>
-<li>Optional on-location sessions</li>
-<li>Customizable wedding coverage</li>
-</ul>
-<p class="space"></p>
-<p class="medium">ALL PRICING INCLUDES:</p>
-<ul>
-<li>Unlimited exposures</li>
-<li>Individually retouched images</li>
-<li>Web-ready images</li>
-<li>No watermarks</li>
-<li>Duplicate b&amp;w images</li>
-</ul>
-<p class="space"></p>
-<p class="medium">DESTINATION &amp; OUT OF AREA:</p>
-<p>I'm happy to take a trip, near or far!
-Inquire about photography services outside of the Vancouver area.</p>
-<p class="space"></p>
-<img src="images/vancitybride.gif" alt="vancitybride" height="85" width="265" />
-<img src="images/weddingful.jpg" alt="weddingful" height="85" width="85" />
-<img src="images/yelplove.jpg" alt="yelp" height="85" width="135" />
-<p class="space"></p>
-</div>
-<div id="widecontent">
-<div class="box1">
-<p class="centeredmedium"><a class="contact" href="contact">Contact me </a> for detailed information and a personalized quote.</p>
-</div>
-<p class="line2"></p>
-<div class="box2">
-<p class="space2"></p>
-<h3>HEADSHOTS, PORTRAITS &amp; ONLINE PROFILE PORTRAITS:</h3>
-<img class="maincenter" src="images/tburdhpbanner.jpg" alt="vancouver headshot portrait photographer" height="130" width="518" />
-<div id="prices"><p class="medium">All-inclusive pricing from $295.</p>
-<p>You receive at least 15 retouched images in colour and black and white.</p></div>
-<p class="space2"></p>
-<p class="line"></p>
-<p class="space2"></p>
-<h4>CORPORATE, BUSINESS &amp; REALTOR HEADSHOTS:</h4>
-<img class="maincenter" src="images/tburdcorpbanner.jpg" alt="corporate photographer business photographer" height="130" width="518" />
-<div id="prices"><p class="medium">All-inclusive pricing from $295.</p>
-<p>You receive at least 15 retouched images in colour and black and white.</p></div>
-<p class="space2"></p>
-<p class="line"></p>
-<p class="space2"></p>
-<h5>FAMILY PORTRAITS &amp; CHILD PORTRAITS:</h5>
-<img class="maincenter" src="images/tburdfambanner.jpg" alt="children's family photographer" height="130" width="518" />
-<div id="prices"><p class="medium">All-inclusive pricing from $295.</p>
-<p>You receive at least 15 retouched images in colour and black and white.</p></div>
-<p class="space2"></p>
-<p class="line"></p>
-<p class="space2"></p>
-<h6>WEDDING PHOTOGRAPHY:</h6>
-<img class="maincenter" src="images/tburdweddingsbanner.jpg" alt="wedding images" height="130" width="518" />
-<div id="prices"><p class="medium">All-inclusive wedding coverage from $1700<br/>
-<p>Pricing begins at 4 hours of coverage.</p></div>
-<p class="space2"></p>
-<p class="line2"></p>
-</div>
-<br class="clear" />
-</div>
-</div>
-<div id="copyright">
-<p>Copyright &copy; 2015 Tamea Burd Photography, Vancouver, BC, Canada. All Rights Reserved.</p>
-</div>
-<!-- end footer --> 
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-3497126-2']);
