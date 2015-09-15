@@ -508,6 +508,14 @@ and (max-width : 760px) {
   .pricing-content {
       margin-top:1.5em;
   }
+  .pricing-content .column-left {
+      text-align:center;
+  }
+  .pricing-content .column-left ul,
+  .pricing-content .column-left li  {
+      list-style:none;
+      padding:0;
+  }
   .pricing-item  {
     margin:30px 0;
   }
