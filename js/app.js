@@ -50,10 +50,25 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
             $("#slides").append('<a id="full-screen" href="#">full screen</a>');
             // add in the thumbnails
             var i=1;
-            $(".slidesjs-pagination-item").each(function(){
-              $(this).find("a").css("background-image","url(thumbs/" + $(".slidesjs-control img:nth-child("+i+")").attr("src")+")");
-              i++;
-            });
+            var baseUrl = "images/portfolio/";
+            
+            var slidesHeight = $(".slidesjs-container").height();
+            /*$(".slidesjs-control img").each(function() {
+               if( $(this).height() > slidesHeight) {
+                   $(this).addClass("tall");
+               } else if( $(this).height() < slidesHeight ) {
+                   $(this).addClass("wide");
+               }
+            });*/
+            if($(window).width() > 760) {
+                $(".slidesjs-pagination-item").each(function(){
+                  var dirUrl = $(".slidesjs-control div:nth-child("+i+") img").attr("src").split(baseUrl);
+                  $(this).find("a").css("background-image","url(" + baseUrl + "thumbs/" + dirUrl[1]+")");
+                  i++;
+                });
+            } else {
+                $("#slides").addClass("mobile-slides");
+            }
           }
         }
       });
@@ -82,10 +97,19 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
         $(".container").css("width", newWidth + "px");
         needResize = false;
         $(window).trigger('resize');
+      } else if( $("#slides").hasClass("mobile-slides") ) {
+          if($(".slidesjs-container").height() > $(window).height()) {
+              // height is changed to window height
+              // width is porportionately changed
+              // resize needs to trigger again
+              // but without going here? maybe "on orientation change" is where this should happen
+              // though that is a jquery mobile thing...
+          }
       } else {
         needResize = true;
       }
     });
+    
     
 });
                     

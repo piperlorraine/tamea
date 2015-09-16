@@ -71,13 +71,17 @@
 
     .slidesjs-pagination li a {
       display: block;
-      width: 13px;
+      width: 38px;
       height: 0;
-      padding-top: 13px;
+      padding-top: 38px;
       background-image: url(../images/slides/pagination.png);
       background-position: 0 0;
       float: left;
       overflow: hidden;
+    }
+    .mobile-slides .slidesjs-pagination,
+    .mobile-slides #full-screen {
+        display:none;
     }
 
     .slidesjs-pagination li a.active,
@@ -121,6 +125,25 @@
       height:100%;
       background-color:#000;
       z-index:100;
+    }
+    .slidesjs-control div {
+        height:100%;
+        text-align:center;
+    }
+    .slidesjs-slide img {
+        width:100%;
+        max-height:100%;
+        vertical-align:middle;
+    }
+    
+    .tall {
+        width:60% !important;
+        padding:0 20% !important;
+        /* 384 x 569 */
+    }
+    .wide {
+        padding:12% 0 !important;
+        /* 650 x 433 */
     }
 
 /*

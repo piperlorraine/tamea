@@ -65,7 +65,9 @@
 	<div class="slides-wrapper">
         <div ng-app="portfolioApp" ng-controller="contentCtrl" class="container">
             <div id="slides" class='portfolio'>
-                <img ng-repeat="pic in pics.headshots" on-finish-render="ngRepeatFinished" ng-src="{{pic.url}}" alt="actor headshots, author headshots, musician headshots">
+                <div ng-repeat="pic in pics.headshots" on-finish-render="ngRepeatFinished">
+                    <img ng-src="{{pic.url}}" alt="actor headshots, author headshots, musician headshots">
+                </div>
             </div>
             
         </div>
