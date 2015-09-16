@@ -1,58 +1,62 @@
 <?php
   
-  $landscapeFiles = glob('landscape/*.jpg');
-  $stillFiles = glob('still_life-chairs/*.jpg');
-  $figureFiles = glob('figure/*.jpg');
-  $collageFiles = glob('collage/*.jpg');
+  $corporateFiles = glob('corporate/*.jpg');
+  $familyFiles = glob('families/*.jpg');
+  $fineArtFiles = glob('fine_art/*.jpg');
+  $headshotFiles = glob('headshots/*.jpg');
   $portraitFiles = glob('portraits/*.jpg');
+  $weddingFiles = glob('weddings/*.jpg');
   
-  $landscapeSize = sizeof($landscapeFiles);
-  $stillSize = sizeof($stillFiles);
-  $figureSize = sizeof($figureFiles);
-  $collageSize = sizeof($collageFiles);
+  /*
+  $corporateSize = sizeof($corporateFiles);
+  $familySize = sizeof($familyFiles);
+  $fineArtSize = sizeof($fineArtFiles);
+  $headshotSize = sizeof($headshotFiles);
   $portraitSize = sizeof($portraitFiles);
+  $weddingSize = sizeof($weddingFiles);
+  */
   
   $jsonFiles = array();
   
-  $jsonFiles['landscape'] = array();
-  $jsonFiles['still'] = array();
-  $jsonFiles['figure'] = array();
-  $jsonFiles['collage'] = array();
-  $jsonFiles['portrait'] = array();
-  
+  $jsonFiles['corporate'] = array();
+  $jsonFiles['families'] = array();
+  $jsonFiles['fine_art'] = array();
+  $jsonFiles['headshots'] = array();
+  $jsonFiles['portraits'] = array();
+  $jsonFiles['weddings'] = array();
+/*
   $i = 1;
-  foreach ($landscapeFiles as $value) {
-    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/thumbs/".$value, "caption" => "Landscape - ".$i.' of '.$landscapeSize );
+  foreach ($corporateFiles as $value) {
+    $newArray = array("url" => "images/corporate/".$value, "thumbUrl" => "images/thumbs/".$value, "caption" => "Landscape - ".$i.' of '.$landscapeSize );
     $i++;
     $jsonFiles['landscape'][] = $newArray;
   }
-  
-  $i = 1;
-  foreach ($stillFiles as $value) {
-    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/thumbs/".$value, "caption" => "Still Life and Chairs - ".$i.' of '.$stillSize );
-    $i++;
-    $jsonFiles['still'][] = $newArray;
+  */
+
+  foreach ($corporateFiles as $value) {
+    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/portfolio/thumbs/".$value );
+    $jsonFiles['corporate'][] = $newArray;
   }
-  
-  $i = 1;
-  foreach ($figureFiles as $value) {
-    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/thumbs/".$value, "caption" => "Figure - ".$i.' of '.$figureSize);
-    $i++;
-    $jsonFiles['figure'][] = $newArray;
+  foreach ($familyFiles as $value) {
+    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/portfolio/thumbs/".$value );
+    $jsonFiles['families'][] = $newArray;
   }
-  
-  $i = 1;
-  foreach ($collageFiles as $value) {
-    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/thumbs/".$value, "caption" => "Collage - ".$i.' of '.$collageSize );
-    $i++;
-    $jsonFiles['collage'][] = $newArray;
+  foreach ($fineArtFiles as $value) {
+    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/portfolio/thumbs/".$value );
+    $jsonFiles['fine_art'][] = $newArray;
   }
-  
-  $i = 1;
+  foreach ($headshotFiles as $value) {
+    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/portfolio/thumbs/".$value );
+    $jsonFiles['headshots'][] = $newArray;
+  }
   foreach ($portraitFiles as $value) {
-    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/thumbs/".$value, "caption" => "Portrait - ".$i.' of '.$portraitSize );
-    $i++;
-    $jsonFiles['portrait'][] = $newArray;
+    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/portfolio/thumbs/".$value );
+    $jsonFiles['portraits'][] = $newArray;
   }
+  foreach ($weddingFiles as $value) {
+    $newArray = array("url" => "images/portfolio/".$value, "thumbUrl" => "images/portfolio/thumbs/".$value );
+    $jsonFiles['weddings'][] = $newArray;
+  }
+
   echo json_encode($jsonFiles);
 ?>

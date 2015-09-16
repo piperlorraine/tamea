@@ -11,6 +11,10 @@ body, .ui-overlay-a {
 .ui-header, .ui-footer {
 	border:none;
 }
+img {
+  max-width:100%;
+  height:auto;
+}
 a {
   color: #990000;
   text-decoration: none;
@@ -81,6 +85,10 @@ p {
 .ui-header .ui-title, .ui-footer .ui-title {
   margin:0;
 }
+.header {
+  position:relative;
+  z-index:10;
+}
 .header #logo {
   margin-top:20px;
 }
@@ -101,7 +109,8 @@ p {
 ul#nav {
 	text-align: center;
 	padding:0;
-	margin:0;
+	margin:0 auto;
+  display:table;
 }
 ul#nav ul {
   margin:0;
@@ -249,9 +258,8 @@ a.contact {
 }
 p.textentry {
     padding-top: 5px;
-    margin: 0 0 0 235px;
+    margin: 0 11% 0 24%;
     color: #666666;
-    width: 625px;
 }
 span.names {
     font-family: Tahoma, Geneva, sans-serif;
@@ -261,8 +269,7 @@ span.names {
 .testimonialentry img {
     margin: 0;
     float: left;
-    padding-left: 5px;
-    padding-top: 15px;
+    padding: 15px 10px 0 5px;
 }
 .video-box {
   text-align:center;
@@ -424,6 +431,13 @@ and (max-width : 1040px)  {
     border:none;
     margin-top:0;
     width:auto;
+    padding:30px 20px;
+  }
+  .testimonialentry img {
+    padding-left:0;
+  }
+  ul#nav li a {
+    padding:13px;
   }
 }
 /* mobile devices */
@@ -446,6 +460,9 @@ and (max-width : 760px) {
   }
   p {
     margin:.5em 0;
+  }
+  .homepage .main-copy {
+    text-align:center;
   }
   #container {
     padding:0;
@@ -492,6 +509,12 @@ and (max-width : 760px) {
   .column, .pricing-content .column {
     float:none;
     width:100%;
+    text-align:center;
+  }
+  .column ul,
+  .column li  {
+      list-style:none;
+      padding:0;
   }
   .column-right .column-divide,
   .column-left .column-divide {
@@ -508,14 +531,6 @@ and (max-width : 760px) {
   .pricing-content {
       margin-top:1.5em;
   }
-  .pricing-content .column-left {
-      text-align:center;
-  }
-  .pricing-content .column-left ul,
-  .pricing-content .column-left li  {
-      list-style:none;
-      padding:0;
-  }
   .pricing-item  {
     margin:30px 0;
   }
@@ -531,7 +546,7 @@ and (max-width : 760px) {
     height:auto;
   }
   .testimonialentry {
-      padding:0 10px;
+      padding:0 15px;
   }
   .testimonialentry:first-child {
       margin-top:2em;
