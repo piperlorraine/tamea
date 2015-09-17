@@ -560,4 +560,12 @@ and (max-width : 760px) {
     margin: 0;
     width: auto;
   }
+
+  .slidesjs-pagination,
+  #full-screen {
+    display:none;
+  }
+  .slidesjs-container {
+      background-color:transparent;
+    }
 }

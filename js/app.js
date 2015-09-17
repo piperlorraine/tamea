@@ -2,25 +2,14 @@ var app = angular.module("portfolioApp",[]);
 var needResize;
 
 app.controller("contentCtrl",['$scope','$http', function($scope, $http) {
-    $http.get("images/portfolio/json.php").success(function(response) {$scope.pics = response;});
-    //$http.get("scripts/thumbs.php");
-    /*
-    $scope.openLightboxModalLandscape = function (index) {
-        Lightbox.openModal($scope.pics.landscape, index);
-    };
-    $scope.openLightboxModalStill = function (index) {
-        Lightbox.openModal($scope.pics.still, index);
-    };
-    $scope.openLightboxModalFigure = function (index) {
-        Lightbox.openModal($scope.pics.figure, index);
-    };
-    $scope.openLightboxModalCollage = function (index) {
-        Lightbox.openModal($scope.pics.collage, index);
-    };
-    $scope.openLightboxModalPortrait = function (index) {
-        Lightbox.openModal($scope.pics.portrait, index);
-    };
-      */
+  $http.get(
+    "images/portfolio/json.php", {
+      params: {
+        section: $("body").attr("id")
+      }
+    })
+    .success(function(response) {$scope.pics = response;});
+
 $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
     $(function() {
       $('#slides').slidesjs({
@@ -35,43 +24,44 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
         play: {
           active: true,
           auto: true,
-          interval: 4000,
-          swap: true,
-          pauseOnHover: true,
-          restartDelay: 3000,
+          interval: 5000,
+          swap: false,
+          pauseOnHover: false,
+          restartDelay: 1000,
           effect: "fade"
         },
         effect: {
-          speed:300, //default
-          crossfade:true //default
+          fade: {
+            speed:1000, //default
+            crossfade:true //default
+          }
         },
         callback: {
           loaded: function(n) {
-            $("#slides").append('<a id="full-screen" href="#">full screen</a>');
+            
             // add in the thumbnails
             var i=1;
             var baseUrl = "images/portfolio/";
             
-            var slidesHeight = $(".slidesjs-container").height();
-            /*$(".slidesjs-control img").each(function() {
-               if( $(this).height() > slidesHeight) {
-                   $(this).addClass("tall");
-               } else if( $(this).height() < slidesHeight ) {
-                   $(this).addClass("wide");
-               }
-            });*/
             if($(window).width() > 760) {
+                $("#slides").append('<a id="full-screen" href="#">full screen</a>');
                 $(".slidesjs-pagination-item").each(function(){
                   var dirUrl = $(".slidesjs-control div:nth-child("+i+") img").attr("src").split(baseUrl);
                   $(this).find("a").css("background-image","url(" + baseUrl + "thumbs/" + dirUrl[1]+")");
                   i++;
                 });
-            } else {
-                $("#slides").addClass("mobile-slides");
             }
           }
         }
       });
+    });
+
+    $(".slidesjs-control div img").one("load", function() {
+      if( $(this).height() > $(".slidesjs-control").height() ) {
+        $(this).addClass("tall");
+      }
+    }).each(function() {
+      if(this.complete) $(this).load();
     });
 
     $("#full-screen").click(function() {

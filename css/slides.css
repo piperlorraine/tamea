@@ -1,7 +1,16 @@
 /* SlidesJS Optional: If you'd like to use this design */
 
+.slides-wrapper {
+  padding:20px 50px;
+}
     #slides {
       display: none
+    }
+    .slidesjs-container {
+      background-color:#efefef;
+    }
+    .full-screen .slidesjs-container {
+      background-color:transparent;
     }
 
     #slides .slidesjs-navigation {
@@ -45,17 +54,19 @@
       background-position: -25px 0;
     }
 
-    a:hover.slidesjs-play {
+    a:hover.slidesjs-play,
+    a.slidesjs-playing {
       background-position: -25px -18px;
     }
 
-    a.slidesjs-stop {
+    a.slidesjs-stop,
+    a:hover.slidesjs-stop {
       width:18px;
-      background-position: -41px 0;
+      background-position: -41px -18px;
     }
 
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
+    a.slidesjs-playing + a.slidesjs-stop {
+      background-position: -41px 0;
     }
 
     .slidesjs-pagination {
@@ -78,10 +89,6 @@
       background-position: 0 0;
       float: left;
       overflow: hidden;
-    }
-    .mobile-slides .slidesjs-pagination,
-    .mobile-slides #full-screen {
-        display:none;
     }
 
     .slidesjs-pagination li a.active,
@@ -131,19 +138,18 @@
         text-align:center;
     }
     .slidesjs-slide img {
-        width:100%;
-        max-height:100%;
-        vertical-align:middle;
+      width:100%;
+      vertical-align: middle;
+    }
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
     }
     
-    .tall {
-        width:60% !important;
-        padding:0 20% !important;
-        /* 384 x 569 */
-    }
-    .wide {
-        padding:12% 0 !important;
-        /* 650 x 433 */
+    .slidesjs-slide img.tall {
+        height:100%;
+        width:auto;
     }
 
 /*

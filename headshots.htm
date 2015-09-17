@@ -28,7 +28,7 @@
 <script type="text/javascript" src="js_galleries/headshot/js/initgallery.js"></script>
 <link rel="stylesheet" href="js_galleries/headshot/js/mhgallery.css" type="text/css"/>-->
 </head>
-<body>
+<body id="headshots">
 <div data-role="page">
 <div id="container">
 	<div data-role="header" class="header">
@@ -65,8 +65,8 @@
 	<div class="slides-wrapper">
         <div ng-app="portfolioApp" ng-controller="contentCtrl" class="container">
             <div id="slides" class='portfolio'>
-                <div ng-repeat="pic in pics.headshots" on-finish-render="ngRepeatFinished">
-                    <img ng-src="{{pic.url}}" alt="actor headshots, author headshots, musician headshots">
+                <div ng-repeat="pic in pics.item" on-finish-render="ngRepeatFinished">
+                    <span class="helper"></span><img ng-src="{{pic.url}}" alt="actor headshots, author headshots, musician headshots">
                 </div>
             </div>
             

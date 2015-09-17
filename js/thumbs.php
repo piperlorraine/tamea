@@ -1,11 +1,12 @@
 <?php
 function deleteThumbs($section) {
-  $files = glob("../images/portfolio/".$section.'/*'); // get all file names
+  print "Deleting old thumbnails for $section...<br>";
+  $files = glob("../images/portfolio/thumbs/".$section.'/*'); // get all file names
   foreach($files as $file){ // iterate files
   if(is_file($file))
     unlink($file); // delete file
   }
-  print "<h2>Deleted all files for $section</h2>";
+  print "Finished delete<br><br>";
 }
 function createThumbs( $section ) 
 {
@@ -88,7 +89,7 @@ function createThumbs( $section )
 
 <?php
 if( isset($_POST['selection']) ) {
-  //deleteThumbs($_POST['selection']);
+  deleteThumbs($_POST['selection']);
   createThumbs($_POST['selection']);
 }
 ?>
