@@ -1,4 +1,3 @@
-/****** homepage ******/
 html, body {
   margin: 0;
   padding: 0;
@@ -52,12 +51,6 @@ h2 {
 .header h2 {
   margin-top:0;
 }
-.homepage h1 {
-  margin-bottom:.6em;
-}
-.homepage h2 {
-  margin-top:.8em;
-}
 h3, h4 {
   margin-bottom: 1em;
   font:normal 1.2em Century Gothic, sans-serif;
@@ -70,17 +63,6 @@ h3.big-top {
 h3.big-btm {
   margin-bottom:2em;
 }
-/*
-h4 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font: normal 1.2em Century Gothic, sans-serif;
-}
-h5 {
-  margin-bottom: 1em;
-  font:normal 0.5em Century Gothic, sans-serif;
-  letter-spacing: -1px;
-}*/
 p {
   margin-bottom: 1.5em;
   color:#666666;
@@ -90,7 +72,7 @@ p {
 }
 .header {
   position:relative;
-  z-index:10;
+  z-index:900;
 }
 .header #logo {
   margin-top:20px;
@@ -116,20 +98,6 @@ ul#nav {
 	margin:0 auto;
   display:table;
 }
-ul#nav ul {
-  margin:0;
-  padding:0;
-  padding-bottom: 15px;
-  z-index: 10000;
-}
-ul.sf-menu ul {
-  background: #f8f2f2 none repeat scroll 0%;
-  position: absolute;
-  width: 155px;
-  font-size: .8em;
-  top: auto;
-  display:none;
-}
 ul.sf-menu li {
   display: inline;
   list-style-type: none;
@@ -147,6 +115,12 @@ ul.sf-menu li:hover {
   text-decoration: none;
   font-family: Century Gothic, sans-serif;
 }
+ul.sf-menu li.li-nav-parent a {
+  cursor:default;
+}
+ul.sf-menu li.li-nav-parent li a {
+  cursor:pointer;
+}
 ul.sf-menu a {
   display: block;
   position: relative;
@@ -159,13 +133,7 @@ ul#nav li a {
   text-decoration: none;
   font-family: Century Gothic, sans-serif;
   color: #990000;
-  margin-right: 2px;
-  font-size: 1.1em;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-ul#nav li ul li a {
-  color:#333;
+  margin: 5px 0;
 }
 ul#nav li a:hover {
   text-decoration: none;
@@ -174,37 +142,34 @@ ul#nav li a:active {
   text-decoration: none;
   font-family: Century Gothic, sans-serif;
 }
-ul.sf-menu ul li {
-  width: 150px;
-  float: left;
-}
-ul#nav ul ul {
-  margin-right: auto;
-  margin-left: auto;
-  width: 975px;
-  text-align: center;
-  font-family: Century Gothic, sans-serif;
-}
-ul.sf-menu ul ul {
-  margin: 4px 0 4px 150px;
-  top: 0;
-}
 ul#nav li.selected a, ul#nav li a:hover {
   text-decoration: none;
-  font-size: 1.1em;
   color: #000000;
+}
+ul#nav ul {
+  margin:0;
+  padding:0;
+  background-color: #f8f2f2;
+  position: absolute;
+  width: 175px;
+  top: auto;
+  left:-16px;
+  display:none;
+  font-size:.8em;
+}
+ul#nav li ul li {
+  text-align:center;
+  float:none;
+}
+ul#nav li ul li a {
+  padding:8px 20px;
+  color:#333;
 }
 ul#nav ul li a:hover, ul#nav ul li a:focus, ul#nav li.selected ul a:hover {
   color:#900;
 }
-ul.sf-menu li:hover ul, ul.sf-menu li:focus ul, ul.sf-menu li.sf-hover ul, ul.sf-menu ul li:hover ul, ul.sf-menu ul li:focus ul, ul.sf-menu ul li.sf-hover ul, ul.sf-menu ul ul li:hover ul, ul.sf-menu ul ul li:focus ul, ul.sf-menu ul ul li.sf-hover ul, ul.sf-menu ul ul ul li:hover ul, ul.sf-menu ul ul ul li:focus ul, ul.sf-menu ul ul ul li.sf-hover ul {
-  left: auto;
-}
-ul.sf-menu li:hover ul ul, ul.sf-menu li:focus ul ul, ul.sf-menu li.sf-hover ul ul, ul.sf-menu ul li:hover ul ul, ul.sf-menu ul li:focus ul ul, ul.sf-menu ul li.sf-hover ul ul, ul.sf-menu ul ul li:hover ul ul, ul.sf-menu ul ul li:focus ul ul, ul.sf-menu ul ul li.sf-hover ul ul, ul.sf-menu ul ul ul li:hover ul ul, ul.sf-menu ul ul ul li:focus ul ul, ul.sf-menu ul ul ul li.sf-hover ul ul {
-  left: -999999px;
-}
 
-/****** CONTACT ******/
+/*** GENERAL CONTENT ***/
 .ui-content {
   color: #666666;
   font-family: Tahoma, Geneva, sans-serif;
@@ -221,14 +186,8 @@ ul.sf-menu li:hover ul ul, ul.sf-menu li:focus ul ul, ul.sf-menu li.sf-hover ul 
 .column-left {
   width:45%;
 }
-.pricing-content .column-left {
-  width:40%;
-}
 .column-right {
   width:55%;
-}
-.pricing-content .column-right {
-  width:60%;
 }
 .column-left .column-divide {
   border-right:3px solid #666;
@@ -240,10 +199,6 @@ ul.sf-menu li:hover ul ul, ul.sf-menu li:focus ul ul, ul.sf-menu li.sf-hover ul 
 .column ul {
   padding-left:20px;
 }
-.column .social-box {
-  margin-top:45px;
-  text-align:center;
-}
 img.center {
   display:block;
   margin:0 auto;
@@ -252,18 +207,27 @@ p em {
   font-size:1em;
   letter-spacing:-1px;
 }
+
+/*** CONTACT ***/
+.column .social-box {
+  margin-top:45px;
+  text-align:center;
+}
 a.contact {
   font:1em Century Gothic, sans-serif;
 }
 
-/* testimonials */
+/*** TESTIMONITALS ***/
+.testimonial-content {
+  padding-left:30px;
+}
 .testimonialentry {
     clear:both;
     margin:3em 0;
 }
 p.textentry {
     padding-top: 5px;
-    margin: 0 11% 0 24%;
+    margin: 0 8% 0 24%;
     color: #666666;
 }
 span.names {
@@ -283,6 +247,14 @@ span.names {
   text-align:center;
   margin-top:75px;
 }
+
+/*** PRICING ***/
+.pricing-content .column-left {
+  width:40%;
+}
+.pricing-content .column-right {
+  width:60%;
+}
 .pricing-item {
   border-top:2px solid #000;
   margin:50px 0;
@@ -295,22 +267,7 @@ span.names {
   margin:.8em 0;
 }
 
-/*** HEADER ***/
-img.left {
-  margin: 5px 20px 20px 0;
-  float: left;
-}
-img.top {
-  margin: 5px 0 20px;
-}
-.logoleft {
-  display: inline;
-  float: left;
-  position: relative;
-  margin-right: 20px;
-  margin-top: -50px;
-  margin-left: -65px;
-}
+/*** HOMEPAGE ***/
 .imgbanner{
   text-align: center;
   margin: 5px auto 5px auto;
@@ -327,28 +284,17 @@ img.top {
   font-size: 1.1em;
   margin: 1px 5px;
 }
-#bg {
-  margin: 0px auto 0px auto;
-  padding: 30px 20px 5px 0;
-}
 #logo {
   margin: 0px auto;
   padding-bottom: 5px;
   text-align: center;
   clear:both;
 }
-#header {
-  margin: 35px auto;
-  height: 60px;
-  float: left;
-  width: 650px;
-  padding-bottom: 130px;
-}
-#box1 {
+#home-box {
   padding: 0 20px 40px;
   margin: 1px auto;
 }
-#box2 {
+#home-social {
   text-align: center;
   padding-bottom: 5px;
   margin: 1px auto;
@@ -360,29 +306,8 @@ a.imglink {
   padding: 10px 15px;
   display:inline-block;
 }
-/*
-.widecontent a {
-  color: #d9dada;
-}
-.widecontent h2, .widecontent h3, .widecontent h4 {
-  color: 000000;
-}
-.narrowcontent ul {
-  list-style-type: disc;
-  list-style-image: none;
-  list-style-position: inside;
-  font-size: 1em;
-  margin-left: 5px;
-}
-.narrowcontent ul li {
-  border-style: none;
-  padding: 5px 0;
-  font-size: 1em;
-}
-.narrowcontent ul li.first {
-  border-width: 0;
-  padding-top: 0;
-}*/
+
+/*** FOOTER ***/
 #copyright {
   position: relative;
   margin: 30px auto 20px;
@@ -400,19 +325,11 @@ a.imglink {
 #copyright a {
   color: #af2828;
 }
-/*
-#footer {
-  padding: 20px;
-  position: relative;
-  float: left;
-  width: 950px;
-  color: #505556;
-  margin: 0px auto 0px auto;
-}*/
 #footer {
     padding:0 10px;
 }
 
+/*** Float fix ***/
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -438,6 +355,9 @@ and (max-width : 1040px)  {
     width:auto;
     padding:30px 20px;
   }
+  .testimonial-content {
+    padding-left:15px;
+  }
   .testimonialentry img {
     padding-left:0;
   }
@@ -448,9 +368,9 @@ and (max-width : 1040px)  {
 /* mobile devices */
 @media only screen 
 and (max-width : 760px) {
-    .ui-content {
-        font-size:1em;
-    }
+  .ui-content {
+      font-size:1em;
+  }
   .homepage h1, h1 {
     font-size:1.2em;
     text-shadow: #474747 1px 0 1px;
@@ -472,21 +392,21 @@ and (max-width : 760px) {
   #container {
     padding:0;
   }
-  #box1 {
+  #home-box {
     padding:0;
   }
-  #box1 .imgbanner img {
+  #home-box .imgbanner img {
     width:100%;
     height:auto;
   }
-  #box1 .linkbox {
+  #home-box .linkbox {
     padding:0 10px 15px;
     margin:0;
   }
   .main-copy {
     padding:0 15px;
   }
-  #box2 {
+  #home-social {
     width:300px;
     margin-top:20px;
   }
@@ -550,6 +470,9 @@ and (max-width : 760px) {
     max-width:100%;
     height:auto;
   }
+  .testimonial-content {
+    padding-left:0;
+  }
   .testimonialentry {
       padding:0 15px;
   }
@@ -564,22 +487,5 @@ and (max-width : 760px) {
     padding:0;
     margin: 0;
     width: auto;
-  }
-
-  .slidesjs-pagination,
-  #full-screen,
-  #pagination-wrapper {
-    display:none;
-  }
-  .slides-wrapper {
-    padding:20px 0;
-  }
-  a.slidesjs-next,
-  a.slidesjs-prev {
-    display:none;
-  }
-  a.slidesjs-play {
-    margin-left:15px;
-    margin-right:30px;
   }
 }

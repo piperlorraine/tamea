@@ -1,10 +1,14 @@
 ﻿body, #content, #container {
 	width: 100%;
 	margin: 0;
+	padding:0;
 	float: none;
 	background: #fff url(none);
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
 }
-#topnav, #navi, #footer, .noprint {
+#navigation, #footer, .no-print {
 	display: none; 
 }
 
