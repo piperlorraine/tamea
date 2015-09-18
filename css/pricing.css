@@ -6,9 +6,10 @@ html {
   padding: 0;
 }
 body {
-  background: #bfbebb url(../images/greybirds.jpg) repeat scroll 0%;
+  background: #bfbebb url(../images/greybirds.jpg) repeat scroll center;
   font-family: Tahoma, Geneva, sans-serif;
   margin: 0px auto 0px auto;
+  height: 100%;
 }
 a {
   display: inline;
@@ -36,7 +37,7 @@ a.contact {
   position: relative;
   color: #990000;
   text-decoration: none;
-  font-family: Century Gothic, sans-serif; 
+  font-family: Century Gothic,sans-serif;
   font-size: 1em;
 }
 a.contact:hover {
@@ -48,7 +49,7 @@ a.contact:hover {
 }
 h3 {
   margin-bottom: 1em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   font-size: 1.2em;
   font-weight: normal;
   letter-spacing: -1px;
@@ -58,7 +59,7 @@ h4 {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   font-weight: normal;
   color: #000000;
 }
@@ -66,7 +67,7 @@ h5 {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   font-weight: normal;
   color: #000000;
 }
@@ -74,7 +75,7 @@ h6 {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   font-weight: normal;
   color: #000000;
 }
@@ -98,7 +99,7 @@ p.large {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   letter-spacing: -1px;
   color: #000000;
 }
@@ -106,7 +107,7 @@ p.large2 {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   letter-spacing: -1px;
   color: #000000;
 }
@@ -114,19 +115,19 @@ p.medium {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   letter-spacing: -1px;
   color: #000000;
 }
-p.centered{
+p.centered {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1em;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Tahoma,Geneva,sans-serif;
   letter-spacing: -1px;
-  color: #666666;;
+  color: #666666;
 }
-p.space{
+p.space {
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -143,7 +144,7 @@ img.left {
   float: left;
 }
 img.maincenter {
-  margin: 10px auto 10px;
+  margin: 10px auto;
   padding-bottom: 15px;
   text-align: center;
 }
@@ -151,29 +152,29 @@ img.top {
   margin: 5px 0 20px;
 }
 p.largetop {
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   font-size: 1.2em;
   letter-spacing: -1px;
   color: #000000;
   margin-bottom: 25px;
 }
-p.space{
+p.space {
   margin-top: 75px;
   margin-bottom: 75px;
 }
-p.space2{
+p.space2 {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-p.line{
-border: 1px solid #000000;
-margin-top: 5px;
-margin-bottom: 55px;
+p.line {
+  border: 1px solid #000000;
+  margin-top: 5px;
+  margin-bottom: 55px;
 }
-p.line2{
-border: 1px solid #000000;
-margin-top: 15px;
-margin-bottom: 15px;
+p.line2 {
+  border: 1px solid #000000;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 #narrowcontent ul {
   list-style-type: disc;
@@ -192,8 +193,6 @@ margin-bottom: 15px;
   padding-top: 0;
 }
 ul#nav {
-  border-radius:10px;
-  box-shadow: 10px 10px 5px #000000;
 }
 ul#nav ul {
   padding-bottom: 15px;
@@ -203,7 +202,7 @@ ul#nav li a {
   padding: 5px 25px;
   z-index: 10000;
   text-decoration: none;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   color: #990000;
   margin-right: 2px;
   font-size: 1.1em;
@@ -215,13 +214,13 @@ ul#nav li a:hover {
 }
 ul#nav li a:active {
   text-decoration: none;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
 }
 ul {
   margin-bottom: 5px;
 }
 #bg {
-  margin: 0px auto 0px auto;
+  margin: 0px auto;
   padding: 30px 20px 5px 0;
 }
 #navigation {
@@ -244,7 +243,7 @@ ul {
   font-size: 2.75em;
   font-weight: normal;
   text-align: center;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   color: #000000;
   padding-bottom: 5px;
   text-shadow: #474747 2px 1px 2px;
@@ -252,29 +251,25 @@ ul {
 #header h2 {
   font-size: 2.35em;
   text-align: center;
-  font-family: 'Marck Script', cursive;
+  font-family: 'Marck Script',cursive;
   color: #54534f;
 }
 #container {
-  border-radius:25px;
-  -webkit-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
   border: 5px solid #333333;
-  padding: 30px;
   margin: 15px auto 5px;
+  padding: 30px;
   background: white none repeat scroll 0% 50%;
+  overflow: hidden;
   width: 975px;
   color: #666666;
-  font-family: Tahoma, Geneva, sans-serif;
-  overflow: hidden;
+  font-family: Tahoma,Geneva,sans-serif;
 }
 #prices {
+  margin-left: auto;
+  font-size: 1em;
   text-align: center;
-  font-size: 0.95em;
   width: 100%;
   margin-right: auto;
-  margin-left: auto;
 }
 .box1 {
   margin: 0px 0 25px;
@@ -284,11 +279,11 @@ ul {
   text-align: center;
 }
 #narrowcontent {
+  background: white none repeat scroll 0%;
   float: left;
   width: 325px;
-  background: white;
   color: #666666;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Tahoma,Geneva,sans-serif;
   font-size: 1.3em;
   margin-right: 10px;
   padding-right: 30px;
@@ -297,21 +292,19 @@ ul {
   border-top-color: #666666;
 }
 #widecontent {
+  background: white none repeat scroll 0%;
   float: right;
   width: 575px;
   margin-top: 50px;
-  background: white;
-  color: #666666;
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: Tahoma,Geneva,sans-serif;
   font-size: 1.3em;
   color: #666666;
 }
 .widecontent a {
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
   color: #d9dada;
 }
 .widecontent h2, .widecontent h3, .widecontent h4 {
-  color: 000000;
 }
 .narrowcontent ul {
   list-style-type: disc;
@@ -330,17 +323,17 @@ ul {
   padding-top: 0;
 }
 #copyright {
+  margin: 30px auto 20px;
   position: relative;
   width: 950px;
-  margin: 30px auto 20px;
   text-align: center;
   color: #505556;
   font-size: 0.6em;
 }
 #schema {
+  margin: 30px auto 20px;
   position: relative;
   width: 950px;
-  margin: 30px auto 20px;
   text-align: center;
   color: #505556;
   font-size: 0.6em;
@@ -349,22 +342,22 @@ ul {
   color: #af2828;
 }
 #footer {
+  margin: 0px auto;
   padding: 20px;
   position: relative;
   float: left;
   width: 950px;
   color: #505556;
-  margin: 0px auto 0px auto;
 }
 html body ul.sf-menu ul ul {
   margin-right: auto;
   margin-left: auto;
   width: 975px;
   text-align: center;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
 }
 ul.sf-menu, ul.sf-menu * {
-text-align: center;
+  text-align: center;
 }
 ul.sf-menu {
   display: inline;
@@ -389,7 +382,7 @@ ul.sf-menu li {
 }
 ul.sf-menu li:hover {
   text-decoration: none;
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,sans-serif;
 }
 ul.sf-menu a {
   display: block;
@@ -398,12 +391,11 @@ ul.sf-menu a {
   margin-left: auto;
 }
 ul.sf-menu ul {
-  background: white none repeat scroll 0%;
   border: 3px solid #333333;
-  border-radius: 25px;
+  background: white none repeat scroll 0% 50%;
   position: absolute;
   width: 155px;
-  font-size: .8em;
+  font-size: 0.8em;
   top: auto;
   left: -999999px;
 }

@@ -6,9 +6,10 @@
   padding: 0;
 }
 body {
-  background: #bfbebb url(../images/greybirds.jpg) repeat scroll 0%;
+  background: #bfbebb url(../images/greybirds.jpg) repeat scroll center;
   font-family: Tahoma, Geneva, sans-serif;
   margin: 0px auto 0px auto;
+  height: 100%;
 }
 a {
   display: inline;

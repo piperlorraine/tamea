@@ -260,6 +260,16 @@ ul.style2 li:first-child {
   margin: auto;
   position: absolute;
 }
+#footer2 {
+  font-family: Verdana,Geneva,sans-serif;
+  text-align: center;
+  font-size: 0.6em;
+  padding-bottom: 50px;
+  padding-top: 60px;
+  width:100%;
+  margin: auto;
+  position: absolute;
+}
 #header-wrapper {
   background: url(../images/prismheader1.jpg) no-repeat scroll center top;
   margin-left: auto;

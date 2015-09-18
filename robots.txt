@@ -11,3 +11,7 @@ Disallow: /*.jpeg$
 
 sitemap: http://cdn.attracta.com/sitemap/3721666.xml.gz
 
+
+#Begin Attracta SEO Tools Sitemap. Do not remove
+sitemap: http://cdn.attracta.com/sitemap/4184833.xml.gz
+#End Attracta SEO Tools Sitemap. Do not remove

@@ -6,27 +6,27 @@
 	  <changefreq>monthly</changefreq>
    </url>
    <url>
-      <loc>http://www.prismaticwebsitesolutions.com/about.html</loc>
+      <loc>http://www.prismaticwebsitesolutions.com/about</loc>
       <priority>0.9</priority>
       <changefreq>monthly</changefreq>
    </url>
    <url>
-      <loc>http://www.prismaticwebsitesolutions.com/contact.html</loc>
+      <loc>http://www.prismaticwebsitesolutions.com/contact</loc>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>http://www.prismaticwebsitesolutions.com/analysis.html</loc>
+      <loc>http://www.prismaticwebsitesolutions.com/analysis</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>http://www.prismaticwebsitesolutions.com/seo.html</loc>
+      <loc>http://www.prismaticwebsitesolutions.com/seo</loc>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>http://www.prismaticwebsitesolutions.com/socialmedia.html</loc>
+      <loc>http://www.prismaticwebsitesolutions.com/socialmedia</loc>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>   
