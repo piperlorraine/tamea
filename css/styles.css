@@ -49,6 +49,9 @@ h2 {
   color: #54534f;
   margin:.5em 0 .8em;
 }
+.header h2 {
+  margin-top:0;
+}
 .homepage h1 {
   margin-bottom:.6em;
 }

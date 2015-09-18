@@ -9,81 +9,78 @@
 <link rel="icon" type="image/ico" href="favicon.ico"/>
 <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
 <!-- stylesheets -->
-<link rel="stylesheet" href="css/gallery.css" type="text/css"/>
+<link rel="stylesheet" href="css/slides.css" type="text/css"/>
+<link rel="stylesheet" href="css/styles.css" type="text/css"/>
+<link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
-<!-- jsgalleries -->
-<script type="text/javascript" src="js_galleries/portrait/js/jquery.js"></script>
-<script type="text/javascript" src="js_galleries/portrait/js/mhgallery.js"></script>
-<script type="text/javascript" src="js_galleries/portrait/js/initgallery.js"></script>
-<link rel="stylesheet" href="js_galleries/portrait/js/mhgallery.css" type="text/css"/>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script type="text/javascript" src="js/responsivemobilemenu.js"></script>
+<script src="js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 </head>
-<body>
-<!-- begin container -->
+<body id="portraits">
+<div data-role="page">
 <div id="container">
-<!-- begin navigation -->
-<div id="navigation">
-<ul class="sf-menu" id="nav">
-<li><a href="index.htm">home</a></li>
-<li><a href="contact">contact</a></li>
-<li class="selected"><a href="#">galleries</a>
-<ul>
-<li><a href="headshots">headshots</a></li>
-<li><a href="portraits">portraits</a></li>
-<li><a href="corporate">corporate</a></li>
-<li><a href="family">family portraits</a></li>
-<li><a href="weddings">weddings</a></li>
-<li><a href="fineart">fine art</a></li>
-</ul>
-</li>
-<li><a href="about">about</a></li>
-<li><a href="testimonials">testimonials</a></li>
-<li><a href="pricing">pricing</a></li>
-<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
-</ul>
+	<div data-role="header" class="header">
+		<!-- begin navigation -->
+		<div id="navigation" class="clearfix">
+			<div class="rmm" data-menu-style = "minimal">
+			<ul class="sf-menu" id="nav">
+				<li><a href="index.htm">home</a></li>
+				<li><a href="contact">contact</a></li>
+				<li class="li-nav-parent selected"><a href="#" class="parent-nav-item">galleries</a>
+					<ul>
+						<li><a href="headshots">headshots</a></li>
+						<li><a href="portraits">portraits</a></li>
+						<li><a href="corporate">corporate</a></li>
+						<li><a href="family">family portraits</a></li>
+						<li><a href="weddings">weddings</a></li>
+						<li><a href="fineart">fine art</a></li>
+					</ul>
+				</li>
+				<li><a href="about">about</a></li>
+				<li><a href="testimonials">testimonials</a></li>
+				<li><a href="pricing">pricing</a></li>
+				<li class="last"><a href="http://tameaburdphotography.wordpress.com/">blog</a></li>
+			</ul>
+			</div>
+		</div>
+		
+		<div id="logo"><img src="images/tbirdslogo.gif" width="100px" height="100px" alt="tburd" /></div>
+		<h1>TAMEA BURD PHOTOGRAPHY</h1>
+		<h2>personal, couple's &amp; online profile portraits</h2>
+	</div>
+
+	<!-- begin slideshow -->
+	<div class="slides-wrapper">
+        <div ng-app="portfolioApp" ng-controller="contentCtrl" class="container">
+            <div id="slides" class='portfolio'>
+                <div ng-repeat="pic in pics.item" on-finish-render="ngRepeatFinished">
+                    <span class="helper"></span><img ng-src="{{pic.url}}" alt="personal portraits, online profile portraits, couple's portraits">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+  <!-- End SlidesJS -->
+
+	</div>
+</div> <!-- container -->
+
+	<div  data-role="footer" id="footer">
+		<!-- footer -->
+		<div id="copyright">
+			<p>Copyright &copy; 2015 Tamea Burd Photography, Vancouver, BC, Canada. All Rights Reserved.</span></p>
+		</div>
+	<!-- end footer --> 
+	</div>
+
 </div>
-<!-- begin header -->
-<div id="header">
-<div id="logo"><img src="images/tbirdslogo.gif" width="100px" height="100px" alt="tburd" /></div>
-<h1>TAMEA BURD PHOTOGRAPHY</h1>
-<h2>personal, couple's &amp; online profile portraits</h2>
-</div>
-<!-- begin content -->
-<div id="slideshowentry">
-<div id="mhgallery">
-<img src="js_galleries/portrait/images/portraits_1.jpg" title="portraits_1" alt="personal portraits, online profile portraits, couple's portraits_1" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_2.jpg" title="portraits_2" alt="personal portraits, online profile portraits, couple's portraits_2" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_3.jpg" title="portraits_3" alt="personal portraits, online profile portraits, couple's portraits_3" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_4.jpg" title="portraits_4" alt="personal portraits, online profile portraits, couple's portraits_4" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_5.jpg" title="portraits_5" alt="personal portraits, online profile portraits, couple's portraits_5" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_6.jpg" title="portraits_6" alt="personal portraits, online profile portraits, couple's portraits_6" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_7.jpg" title="portraits_7" alt="personal portraits, online profile portraits, couple's portraits_7" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_8.jpg" title="portraits_8" alt="personal portraits, online profile portraits, couple's portraits_8" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_9.jpg" title="portraits_9" alt="personal portraits, online profile portraits, couple's portraits_9" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_10.jpg" title="portraits_10" alt="personal portraits, online profile portraits, couple's portraits_10" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_11.jpg" title="portraits_11" alt="personal portraits, online profile portraits, couple's portraits_11" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_12.jpg" title="portraits_12" alt="personal portraits, online profile portraits, couple's portraits_12" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_13.jpg" title="portraits_13" alt="personal portraits, online profile portraits, couple's portraits_13" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_14.jpg" title="portraits_14" alt="personal portraits, online profile portraits, couple's portraits_14" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_15.jpg" title="portraits_15" alt="personal portraits, online profile portraits, couple's portraits_15" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_16.jpg" title="portraits_16" alt="personal portraits, online profile portraits, couple's portraits_16" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_17.jpg" title="portraits_17" alt="personal portraits, online profile portraits, couple's portraits_17" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_18.jpg" title="portraits_18" alt="personal portraits, online profile portraits, couple's portraits_18" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_19.jpg" title="portraits_19" alt="personal portraits, online profile portraits, couple's portraits_19" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_20.jpg" title="portraits_20" alt="personal portraits, online profile portraits, couple's portraits_20" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_21.jpg" title="portraits_21" alt="personal portraits, online profile portraits, couple's portraits_21" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_22.jpg" title="portraits_21" alt="personal portraits, online profile portraits, couple's portraits_22" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_23.jpg" title="portraits_23" alt="personal portraits, online profile portraits, couple's portraits_23" height="569" width="650" />
-<img src="js_galleries/portrait/images/portraits_24.jpg" title="portraits_24" alt="personal portraits, online profile portraits, couple's portraits_24" height="569" width="650" />
-</div>
-</div>
-<!-- end slideshow -->
-</div>
-<!-- begin footer -->
-<div id="copyright">
-<p>Personal portraits, couple portraits and online profile portraits.<br />
-Copyright &copy; 2015 Tamea Burd Photography, Vancouver, BC, Canada. All Rights Reserved.</p>
-</div>
-<!-- end footer -->
+
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-3497126-2']);
