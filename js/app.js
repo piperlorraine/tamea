@@ -45,12 +45,28 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
             
             if($(window).width() > 760) {
                 $("#slides").append('<a id="full-screen" href="#">full screen</a>');
+                $(".slidesjs-pagination").wrap("<div id='pagination-wrapper'><div class='pagination-inner'></div></div>");
+                $("#pagination-wrapper").append("<a href='#' class='pagination-btn' id='pagination-prev'></a><a href='#' class='pagination-btn' id='pagination-next'></a>");
+                
+                var paginationLength = $(".slidesjs-pagination-item").length*40;
+                $(".slidesjs-pagination").css("width", paginationLength + "px");
+                if(paginationLength > $("#pagination-wrapper").width()) {
+                  $("#pagination-prev").hide();
+                } else {
+                  $(".pagination-btn").hide();
+                }
+                
                 $(".slidesjs-pagination-item").each(function(){
                   var dirUrl = $(".slidesjs-control div:nth-child("+i+") img").attr("src").split(baseUrl);
                   $(this).find("a").css("background-image","url(" + baseUrl + "thumbs/" + dirUrl[1]+")");
                   i++;
                 });
             }
+
+
+          },
+          complete: function(n) {
+            console.log("complete: "+n);
           }
         }
       });
@@ -80,7 +96,7 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 
     $(window).resize(function() {
       if($("#full-screen").hasClass("is-full") && needResize) {
-        var newWidth = 650/569*($(window).height()-25);
+        var newWidth = 650/569*($(window).height()-50);
         if(newWidth > $(window).width()) {
           newWidth = $(window).width();
         }

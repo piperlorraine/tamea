@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 	$(".sf-menu .li-nav-parent").mouseover(function() {
-		$(this).find("ul").fadeIn();
+		$(this).find("ul").slideDown();
 	}).mouseleave(function() {
-		$(this).find("ul").fadeOut();
+		$(this).find("ul").slideUp();
 	});
         
   var width, height;

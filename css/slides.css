@@ -3,6 +3,9 @@
 .slides-wrapper {
   padding:20px 50px;
 }
+.slides-wrapper.full-screen {
+  padding:0;
+}
     #slides {
       display: none;
       position:relative;
@@ -14,51 +17,63 @@
       background-color:transparent;
     }
 
-    #slides .slidesjs-navigation {
-      margin-top:5px;
-    }
-
-    a.slidesjs-next,
-    a.slidesjs-previous,
     a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(../images/slides/btns-next-prev.png);
-      background-repeat: no-repeat;
+    a.slidesjs-stop,
+    a#full-screen {
+      background: url(../images/slides/btns-next-prev.png) no-repeat;
       display:block;
       width:12px;
       height:18px;
       overflow: hidden;
       text-indent: -9999px;
       float: left;
-      margin-right:5px;
+      margin-top:15px;
+      margin-right:10px;
+    }
+    a#full-screen {
+      background-position: -60px 0;
+      width:22px;
+    }
+    .full-screen a#full-screen {
+      background-position: -85px 0;
+    }
+    a#full-screen:hover {
+      background-position: -60px -18px;
+    }
+    .full-screen a#full-screen:hover {
+      background-position: -85px -18px;
     }
 
-    a.slidesjs-next {
-      background-position: -12px 0;
+    a.slidesjs-next,
+    a.slidesjs-previous {
+      display:block;
       position:absolute;
       top:20%;
-      right:0;
-      margin:0;
       width:100px;
       height:50%;
+      background-repeat:no-repeat;
+      background-position:-200px 0;
+      margin:0;
+      z-index:999;
+      overflow: hidden;
+      text-indent: -9999px;
+      margin:0 15px;
     }
-
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
+    a.slidesjs-next {
+      background-image: url(../images/slides/rightarrow.png);
+      right:0;
     }
 
     a.slidesjs-previous {
-      background-position: 0 0;
-      position:absolute;
-      top:20%;
+      background-image: url(../images/slides/leftarrow.png);
       left:0;
-      margin:0;
-      width:100px;
-      height:50%;
     }
 
     a:hover.slidesjs-previous {
-      background-position: 0 -18px;
+      background-position: left center;
+    }
+    a:hover.slidesjs-next {
+      background-position: right center;
     }
 
     a.slidesjs-play {
@@ -81,9 +96,53 @@
       background-position: -41px 0;
     }
 
-    .slidesjs-pagination {
+    #pagination-wrapper {
+      position:relative;
       margin: 7px 0 0;
+      padding:0 20px;
       float: right;
+      width:82%;
+      overflow:hidden;
+      height:38px;
+    }
+    .pagination-inner {
+      width:100%;
+      height:100%;
+      position:relative;
+      overflow:hidden;
+    }
+
+    #pagination-prev,
+    #pagination-next {
+      display:block;
+      position:absolute;
+      width:12px;
+      height:18px;
+      margin:10px 0;
+      background: url(../images/slides/btns-next-prev.png) no-repeat;
+      top:0;
+    }
+    a#pagination-prev {
+      background-position:0 0;
+      left:0;
+    }
+    a:hover#pagination-prev {
+      background-position:0 -18px;
+    }
+    a#pagination-next {
+      background-position:-12px 0;
+      right:0;
+    }
+    a:hover#pagination-next {
+      background-position:-12px -18px;
+    }
+
+    .slidesjs-pagination {
+      position:absolute;
+      top:0;
+      left:0;
+      margin:0;
+      padding:0;
       list-style: none;
     }
 
@@ -101,10 +160,12 @@
       background-position: 0 0;
       float: left;
       overflow: hidden;
+      opacity: .6;
     }
 
     .slidesjs-pagination li a.active,
     .slidesjs-pagination li a:hover.active {
+      opacity:1;
     }
 
     .slidesjs-pagination li a:hover {

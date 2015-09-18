@@ -93,13 +93,11 @@ p {
   margin-top:20px;
 }
 #container {
-  border-radius:25px;
-  -webkit-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  border: 5px solid #333333;
+  -webkit-box-shadow: 5px 5px 10px 3px #666;
+  -moz-box-shadow: 5px 5px 10px 3px #666;
+  box-shadow: 5px 5px 10px 3px #666;
   padding: 30px;
-  margin: 15px auto 5px;
+  margin: 10px auto 5px;
   background-color:#fff;
   width: 975px;
   overflow: hidden;
@@ -119,9 +117,7 @@ ul#nav ul {
   z-index: 10000;
 }
 ul.sf-menu ul {
-  background: white none repeat scroll 0%;
-  border: 3px solid #333333;
-  border-radius: 25px;
+  background: #f8f2f2 none repeat scroll 0%;
   position: absolute;
   width: 155px;
   font-size: .8em;
@@ -162,8 +158,8 @@ ul#nav li a {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-ul#nav li a li a {
-
+ul#nav li ul li a {
+  color:#333;
 }
 ul#nav li a:hover {
   text-decoration: none;
@@ -187,10 +183,13 @@ ul.sf-menu ul ul {
   margin: 4px 0 4px 150px;
   top: 0;
 }
-ul#nav li.selected a, ul#nav li a:hover, ul#nav ul li a:hover, ul#nav ul li a:focus, ul#nav li.selected ul a:hover {
+ul#nav li.selected a, ul#nav li a:hover {
   text-decoration: none;
   font-size: 1.1em;
   color: #000000;
+}
+ul#nav ul li a:hover, ul#nav ul li a:focus, ul#nav li.selected ul a:hover {
+  color:#900;
 }
 ul.sf-menu li:hover ul, ul.sf-menu li:focus ul, ul.sf-menu li.sf-hover ul, ul.sf-menu ul li:hover ul, ul.sf-menu ul li:focus ul, ul.sf-menu ul li.sf-hover ul, ul.sf-menu ul ul li:hover ul, ul.sf-menu ul ul li:focus ul, ul.sf-menu ul ul li.sf-hover ul, ul.sf-menu ul ul ul li:hover ul, ul.sf-menu ul ul ul li:focus ul, ul.sf-menu ul ul ul li.sf-hover ul {
   left: auto;
@@ -562,10 +561,19 @@ and (max-width : 760px) {
   }
 
   .slidesjs-pagination,
-  #full-screen {
+  #full-screen,
+  #pagination-wrapper {
     display:none;
   }
-  .slidesjs-container {
-      background-color:transparent;
-    }
+  .slides-wrapper {
+    padding:20px 0;
+  }
+  a.slidesjs-next,
+  a.slidesjs-prev {
+    display:none;
+  }
+  a.slidesjs-play {
+    margin-left:15px;
+    margin-right:30px;
+  }
 }
