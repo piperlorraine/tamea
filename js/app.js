@@ -1,5 +1,9 @@
 var app = angular.module("portfolioApp",[]);
 var needResize;
+var thumbWidth = 0;
+var paginationLength = 0;
+var lastSlide = 0;
+var firstSlide = 1;
 
 app.controller("contentCtrl",['$scope','$http', function($scope, $http) {
   $http.get(
@@ -48,9 +52,13 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                 $(".slidesjs-pagination").wrap("<div id='pagination-wrapper'><div class='pagination-inner'></div></div>");
                 $("#pagination-wrapper").append("<a href='#' class='pagination-btn' id='pagination-prev'></a><a href='#' class='pagination-btn' id='pagination-next'></a>");
                 
-                var paginationLength = $(".slidesjs-pagination-item").length*40;
+                var slidesLength = $(".slidesjs-pagination-item").length;
+                paginationLength = slidesLength*40;
                 $(".slidesjs-pagination").css("width", paginationLength + "px");
-                if(paginationLength > $("#pagination-wrapper").width()) {
+                thumbWidth = $("#pagination-wrapper").width();
+                lastSlide = Math.floor(thumbWidth/40);
+                
+                if(paginationLength > thumbWidth) {
                   $("#pagination-prev").hide();
                 } else {
                   $(".pagination-btn").hide();
@@ -65,8 +73,23 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 
 
           },
+          start: function(n) {
+            if(n >= lastSlide) {
+                $("#pagination-next").trigger("click");
+            } else if(n <= firstSlide) {
+                $("#pagination-prev").trigger("click");
+            }
+          },
           complete: function(n) {
-            console.log("complete: "+n);
+            if(n==1) {
+                $(".slidesjs-pagination").animate({
+                    left:0
+                });
+                $("#pagination-prev").hide();
+                if(paginationLength > thumbWidth) {
+                    $("#pagination-next").show();
+                }
+            }
           }
         }
       });
@@ -93,6 +116,57 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
       $(window).trigger('resize');
       return false;
     });
+    
+    $("#pagination-prev").click(function() {
+        var move = $(".pagination-inner").width() - 40;
+        var left = -1 * $(".slidesjs-pagination").position().left;
+        console.log("move: " + move + ", left: " + left);
+        if(left > 0) {
+            if(move >= left) {
+                move = 0;
+                $(this).hide();
+            } else {
+                move = left - move;
+            }
+            $(".slidesjs-pagination").animate({
+                left:(-1*move)
+            },500,function() {
+                var slideDiff = Math.floor(move/40);
+                lastSlide = Math.floor(thumbWidth/40) + slideDiff;
+                firstSlide = slideDiff + 1;
+            });
+            $("#pagination-next").show();
+        } else {
+            $(this).hide();
+        }
+        return false;
+    });
+    $("#pagination-next").click(function() {
+        if(thumbWidth > 0) {
+            var move = $(".pagination-inner").width() - 40;
+            var diff = paginationLength - thumbWidth;
+            var left = -1 * $(".slidesjs-pagination").position().left;
+            console.log("move: " + move + ", diff: " + diff + ", left: " + left);
+            if(diff > left) {
+                move = left + move;
+                if(move >= diff) {
+                    move = diff;
+                    $(this).hide();
+                }
+                $(".slidesjs-pagination").animate({
+                    left:(-1*move)
+                },500,function() {
+                    var slideDiff = Math.floor(move/40);
+                    lastSlide = Math.floor(thumbWidth/40) + slideDiff;
+                    firstSlide = slideDiff + 1;
+                });
+                $("#pagination-prev").show();
+            } else {
+                $(this).hide();
+            }
+        }
+        return false;
+    });
 
     $(window).resize(function() {
       if($("#full-screen").hasClass("is-full") && needResize) {
@@ -103,17 +177,11 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
         $(".container").css("width", newWidth + "px");
         needResize = false;
         $(window).trigger('resize');
-      } else if( $("#slides").hasClass("mobile-slides") ) {
-          if($(".slidesjs-container").height() > $(window).height()) {
-              // height is changed to window height
-              // width is porportionately changed
-              // resize needs to trigger again
-              // but without going here? maybe "on orientation change" is where this should happen
-              // though that is a jquery mobile thing...
-          }
       } else {
         needResize = true;
       }
+      thumbWidth = $("#pagination-wrapper").width();
+      middleSlide = Math.round(thumbWidth/40/2);
     });
     
     

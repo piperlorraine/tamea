@@ -96,6 +96,9 @@ p {
   -webkit-box-shadow: 5px 5px 10px 3px #666;
   -moz-box-shadow: 5px 5px 10px 3px #666;
   box-shadow: 5px 5px 10px 3px #666;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding: 30px;
   margin: 10px auto 5px;
   background-color:#fff;
