@@ -79,6 +79,9 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
             } else if(n <= firstSlide) {
                 $("#pagination-prev").trigger("click");
             }
+            if( $(".slidesjs-control div:nth-child("+(n+1)+") img").height() > $(".slidesjs-control").height() ) {
+             $(".slidesjs-control div:nth-child("+(n+1)+") img").addClass("tall");
+            }
           },
           complete: function(n) {
             if(n==1) {
@@ -89,6 +92,9 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                 if(paginationLength > thumbWidth) {
                     $("#pagination-next").show();
                 }
+            }
+            if( $(".slidesjs-control div:nth-child("+n+") img").height() > $(".slidesjs-control").height() ) {
+              $(".slidesjs-control div:nth-child("+n+") img").addClass("tall");
             }
           }
         }

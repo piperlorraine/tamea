@@ -212,7 +212,9 @@ and (max-width : 760px) {
     padding:20px 0;
   }
   a.slidesjs-next,
-  a.slidesjs-prev {
+  a:hover.slidesjs-next,
+  a.slidesjs-prev,
+  a:hover.slidesjs-prev {
     display:none;
   }
   a.slidesjs-play {
