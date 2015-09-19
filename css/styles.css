@@ -36,20 +36,21 @@ ul {
   padding:5px 0;
 }
 h1 {
-  font:normal 2.75em Century Gothic, sans-serif;
+  font:normal 2.5em Century Gothic, sans-serif;
   text-align: center;
   padding-bottom: 5px;
-  text-shadow: #474747 2px 1px 2px;
-  margin:.6em 0 0;
+  text-shadow: #474747 1px 1px 3px;
+  margin:0;
 }
 h2 {
-  font: 2.35em 'Marck Script', cursive;
+  font: 2.2em 'Marck Script', cursive;
   text-align: center;
   color: #54534f;
   margin:.5em 0 .8em;
 }
 .header h2 {
   margin-top:0;
+  word-spacing: -5px;
 }
 h3, h4 {
   margin-bottom: 1em;
@@ -75,7 +76,7 @@ p {
   z-index:900;
 }
 .header #logo {
-  margin-top:20px;
+  margin-top:25px;
 }
 #container {
   -webkit-box-shadow: 5px 5px 10px 3px #666;
@@ -84,7 +85,7 @@ p {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 30px;
+  padding: 20px 30px 30px;
   margin: 10px auto 5px;
   background-color:#fff;
   width: 975px;
@@ -214,7 +215,14 @@ p em {
   text-align:center;
 }
 a.contact {
-  font:1em Century Gothic, sans-serif;
+  font:.9em Century Gothic, sans-serif;
+}
+.contact-box img {
+    float:left;
+    margin-right:20px;
+}
+.contact-box h3 {
+    padding-top:20px;
 }
 
 /*** TESTIMONITALS ***/
@@ -247,6 +255,12 @@ span.names {
   text-align:center;
   margin-top:75px;
 }
+.badge-box img {
+    margin:15px 4px;
+}
+.yelp-badge {
+    padding-bottom:25px;
+}
 
 /*** PRICING ***/
 .pricing-content .column-left {
@@ -276,6 +290,7 @@ span.names {
   text-align: center;
   font-family: Tahoma, Geneva, sans-serif;
   margin: 0 0 25px;
+  padding-top:10px;
 }
 .linkbox a{
   text-align: center;
@@ -291,7 +306,7 @@ span.names {
   clear:both;
 }
 #home-box {
-  padding: 0 20px 40px;
+  padding: 0 20px 20px;
   margin: 1px auto;
 }
 #home-social {
@@ -303,7 +318,7 @@ span.names {
   color:#666666;
 }
 a.imglink {
-  padding: 10px 15px;
+  padding: 10px 10px;
   display:inline-block;
 }
 
@@ -487,5 +502,11 @@ and (max-width : 760px) {
     padding:0;
     margin: 0;
     width: auto;
+  }
+  .contact-box img {
+      display:none;
+  }
+  .contact-box h3 {
+      padding-top:0;
   }
 }

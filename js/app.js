@@ -47,12 +47,12 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
             var i=1;
             var baseUrl = "images/portfolio/";
             
+            var slidesLength = $(".slidesjs-pagination-item").length;
+            $("#slides").append('<a id="full-screen" href="#">full screen</a>');
             if($(window).width() > 760) {
-                $("#slides").append('<a id="full-screen" href="#">full screen</a>');
                 $(".slidesjs-pagination").wrap("<div id='pagination-wrapper'><div class='pagination-inner'></div></div>");
                 $("#pagination-wrapper").append("<a href='#' class='pagination-btn' id='pagination-prev'></a><a href='#' class='pagination-btn' id='pagination-next'></a>");
                 
-                var slidesLength = $(".slidesjs-pagination-item").length;
                 paginationLength = slidesLength*40;
                 $(".slidesjs-pagination").css("width", paginationLength + "px");
                 thumbWidth = $("#pagination-wrapper").width();
@@ -69,6 +69,8 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                   $(this).find("a").css("background-image","url(" + baseUrl + "thumbs/" + dirUrl[1]+")");
                   i++;
                 });
+            } else {
+                $("#slides").append('<div id="numbered-img"><span id="curr-img">1</span>/'+slidesLength+'</div>');
             }
 
 
@@ -78,9 +80,6 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                 $("#pagination-next").trigger("click");
             } else if(n <= firstSlide) {
                 $("#pagination-prev").trigger("click");
-            }
-            if( $(".slidesjs-control div:nth-child("+(n+1)+") img").height() > $(".slidesjs-control").height() ) {
-             $(".slidesjs-control div:nth-child("+(n+1)+") img").addClass("tall");
             }
           },
           complete: function(n) {
@@ -93,17 +92,21 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                     $("#pagination-next").show();
                 }
             }
-            if( $(".slidesjs-control div:nth-child("+n+") img").height() > $(".slidesjs-control").height() ) {
-              $(".slidesjs-control div:nth-child("+n+") img").addClass("tall");
-            }
+            $("#curr-img").html(n);
           }
         }
       });
     });
 
-    $(".slidesjs-control div img").one("load", function() {
-      if( $(this).height() > $(".slidesjs-control").height() ) {
-        $(this).addClass("tall");
+    var ratio = 650/569;
+    $(".slidesjs-control div img").load(function() {
+      var imgRatio =  $(this).get(0).width / $(this).get(0).height;
+      if(isNaN(imgRatio)) {
+          $(".slidesjs-control div img").addClass("ie-exception");
+      } else {
+        if( ratio > imgRatio ) {
+          $(this).addClass("tall");
+        }
       }
     }).each(function() {
       if(this.complete) $(this).load();
@@ -126,7 +129,6 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
     $("#pagination-prev").click(function() {
         var move = $(".pagination-inner").width() - 40;
         var left = -1 * $(".slidesjs-pagination").position().left;
-        console.log("move: " + move + ", left: " + left);
         if(left > 0) {
             if(move >= left) {
                 move = 0;
