@@ -64,6 +64,9 @@ h3.big-top {
 h3.big-btm {
   margin-bottom:2em;
 }
+h3.med-btm {
+    margin-bottom:1.5em;
+}
 p {
   margin-bottom: 1.5em;
   color:#666666;
@@ -150,7 +153,7 @@ ul#nav li.selected a, ul#nav li a:hover {
 ul#nav ul {
   margin:0;
   padding:0;
-  background-color: #f8f2f2;
+  background-color: #efefef;
   position: absolute;
   width: 175px;
   top: auto;
@@ -213,16 +216,6 @@ p em {
 .column .social-box {
   margin-top:45px;
   text-align:center;
-}
-a.contact {
-  font:.9em Century Gothic, sans-serif;
-}
-.contact-box img {
-    float:left;
-    margin-right:20px;
-}
-.contact-box h3 {
-    padding-top:20px;
 }
 
 /*** TESTIMONITALS ***/
@@ -503,10 +496,7 @@ and (max-width : 760px) {
     margin: 0;
     width: auto;
   }
-  .contact-box img {
+  img.contact-img {
       display:none;
-  }
-  .contact-box h3 {
-      padding-top:0;
   }
 }

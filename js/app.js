@@ -18,7 +18,7 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
     $(function() {
       $('#slides').slidesjs({
         width: 650,
-        height: 569,
+        height: 435,
         pagination: {
           effect: "fade"
         },
@@ -98,7 +98,7 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
       });
     });
 
-    var ratio = 650/569;
+    var ratio = 650/435;
     $(".slidesjs-control div img").load(function() {
       var imgRatio =  $(this).get(0).width / $(this).get(0).height;
       if(isNaN(imgRatio)) {
