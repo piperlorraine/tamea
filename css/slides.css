@@ -9,7 +9,7 @@
   position:relative;
 }
 .slidesjs-container {
-  background-color:#efefef;
+  /*background-color:#efefef;*/
 }
 .full-screen .slidesjs-container {
   background-color:transparent;
@@ -24,7 +24,7 @@ a#full-screen {
   overflow: hidden;
   text-indent: -9999px;
   float: left;
-  margin-top:15px;
+  margin-top:30px;
   margin-right:10px;
 }
 a#full-screen {
@@ -87,7 +87,7 @@ a.slidesjs-playing + a.slidesjs-stop {
 }
 #pagination-wrapper {
   position:relative;
-  margin: 7px 0 0;
+  margin: 22px 0 0;
   padding:0 20px;
   float: right;
   width:82%;
@@ -193,6 +193,11 @@ a:hover#pagination-next {
 .slidesjs-slide img {
   width:100%;
   vertical-align: middle;
+  box-sizing: border-box;
+  border:8px solid #ccc;
+}
+.full-screen .slidesjs-slide img {
+    border:none;
 }
 .slidesjs-slide img.ie-exception {
     width:auto;

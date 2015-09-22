@@ -4,6 +4,8 @@ var thumbWidth = 0;
 var paginationLength = 0;
 var lastSlide = 0;
 var firstSlide = 1;
+var fWidth = 650;
+var fHeight = 435;
 
 app.controller("contentCtrl",['$scope','$http', function($scope, $http) {
   $http.get(
@@ -17,8 +19,8 @@ app.controller("contentCtrl",['$scope','$http', function($scope, $http) {
 $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
     $(function() {
       $('#slides').slidesjs({
-        width: 650,
-        height: 435,
+        width: fWidth,
+        height: fHeight,
         pagination: {
           effect: "fade"
         },
@@ -98,7 +100,7 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
       });
     });
 
-    var ratio = 650/435;
+    var ratio = fWidth/fHeight;
     $(".slidesjs-control div img").load(function() {
       var imgRatio =  $(this).get(0).width / $(this).get(0).height;
       if(isNaN(imgRatio)) {
@@ -178,7 +180,7 @@ $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 
     $(window).resize(function() {
       if($("#full-screen").hasClass("is-full") && needResize) {
-        var newWidth = 650/569*($(window).height()-50);
+        var newWidth = fWidth/fHeight*($(window).height()-65);
         if(newWidth > $(window).width()) {
           newWidth = $(window).width();
         }
