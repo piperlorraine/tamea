@@ -230,8 +230,8 @@ and (max-width : 760px) {
   }
   a.slidesjs-next,
   a:hover.slidesjs-next,
-  a.slidesjs-prev,
-  a:hover.slidesjs-prev {
+  a.slidesjs-previous,
+  a:hover.slidesjs-previous {
     display:none;
   }
   a.slidesjs-play {
