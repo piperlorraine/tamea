@@ -77,11 +77,11 @@ function createThumbs( $section )
 <form method="POST" action="">
   <label>Pick a section to refresh thumbnails:</label>
   <select name="selection">
-    <option value="headshots">Headshots</option>
-    <option value="portraits">Portraits</option>
-    <option value="corporate">Corporate</option>
+    <option value="headshot">Headshots</option>
+    <option value="portrait">Portraits</option>
+    <option value="corporates">Corporate</option>
     <option value="families">Family Portraits</option>
-    <option value="weddings">Weddings</option>
+    <option value="wedding">Weddings</option>
     <option value="fine_art">Fine Art</option>
   </select>
   <input type="submit" value="Redo Thumbnails">

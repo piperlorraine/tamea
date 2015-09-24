@@ -5,11 +5,11 @@ var paginationLength = 0;
 var lastSlide = 0;
 var firstSlide = 1;
 var fWidth = 650;
-var fHeight = 435;
+var fHeight = 432;
 
 app.controller("contentCtrl",['$scope','$http', function($scope, $http) {
   $http.get(
-    "images/portfolio/json.php", {
+    "/images/portfolio/json.php", {
       params: {
         section: $("body").attr("id")
       }
